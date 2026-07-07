@@ -1,0 +1,94 @@
+%%---------------------------------------------------------------------
+% Tapa (carátula) del Informe
+%%---------------------------------------------------------------------
+
+%%---------------------------------------------------------------------
+% Posicionamiento dentro de la página (titling package)
+%%----------------------------------------------------------------------
+
+\setlength{\droptitle}{-2cm}
+
+%%---------------------------------------------------------------------
+% Información previa al título
+%%----------------------------------------------------------------------
+
+\pretitle{
+	\begin{center}
+	\includegraphics[width=0.65\textwidth]{imagenes/Logos-UTN-BA.png}\par
+	\vspace{0.75cm}
+	{\scshape\Large Ingeniería Industrial \par}
+	\vspace{0.75cm}
+	{\scshape\Large Análisis Numérico y Cálculo Avanzado \par}
+	\vspace{0.75cm}
+    {\scshape\Large Curso \Curso \, - Grupo \Grupo \par}
+	\vspace{0.75cm}
+}
+
+%%---------------------------------------------------------------------
+% Información del título
+%%----------------------------------------------------------------------
+
+\title{\huge\bfseries TP Nº\, \TPN \, - \TPTitulo}
+
+%%---------------------------------------------------------------------
+% Información posterior al título
+%%----------------------------------------------------------------------
+
+\posttitle{
+	\vspace{0.5 cm}
+	\newline
+	\large
+	\begin{enumerate}
+	\ifx \AlumnoPrimero \undefined{}
+	\else
+	\item \large \AlumnoPrimero \, (Legajo:\, \LegajoPrimero) \par
+	\fi
+	\ifx \AlumnoSegundo \undefined{}
+	\else
+	\item \large \AlumnoSegundo  \, (Legajo:\, \LegajoSegundo) \par
+	\fi
+	\ifx \AlumnoTercero \undefined{}
+	\else
+	\item \large \AlumnoTercero  \, (Legajo:\, \LegajoTercero) \par
+	\fi
+	\ifx \AlumnoCuarto \undefined{}
+	\else
+	\item \large \AlumnoCuarto  \, (Legajo:\, \LegajoCuarto) \par
+	\fi
+	\ifx \AlumnoQuinto \undefined{}
+	\else
+	\item \large \AlumnoQuinto  \, (Legajo:\, \LegajoQuinto) \par
+	\fi
+	\ifx \AlumnoSexto \undefined{}
+	\else
+	\item \large \AlumnoSexto \, (Legajo:\, \LegajoSexto) \par
+	\fi
+	\ifx \AlumnoSeptimo \undefined{}
+	\else
+	\item \large \AlumnoSeptimo  \, (Legajo:\, \LegajoSeptimo) \par
+	\fi
+	\ifx \AlumnoOctavo \undefined{}
+	\else
+	\item \large \AlumnoOctavo  \, (Legajo:\, \LegajoOctavo) \par
+	\fi
+	\end{enumerate}
+	\vspace{0.3cm}
+	\large Fecha de entrega:\, \EntregaDia \; / \EntregaMes \; / \CicloLectivo \par
+	\end{center}
+}
+
+
+\date{}
+\author{}
+
+%----------------------------------------------------------------------------------------
+%	GENERAR PAGINA DE TITULO
+%----------------------------------------------------------------------------------------
+
+\maketitle
+
+%----------------------------------------------------------------------------------------
+%	OMITIR NUMERO DE PAGINA EN PAGINA DE TITULO
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{empty} 

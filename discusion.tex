@@ -1,0 +1,47 @@
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Discusión
+%----------------------------------------------------------------------------------------
+
+\chapter{Discusión}
+
+\textbf{Los resultados obtenidos están de acuerdo con los valores esperados} (ver Figura \ref{fig:probabilidades}), siendo más precisos a medida que se aumenta el orden de interpolación, y que reduce el espaciamiento para la integración numérica \citep{QueEsEst}.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{imagenes/Probabilidades.png}
+	\caption{Probabilidades calculadas a partir de la función de distribución Gaussiana}
+	\label{fig:probabilidades}
+\end{figure}
+
+Para comenzar, podemos notar que estamos trabajando a un apartamiento del doble de $\sigma$. Según valores tabulados, la probabilidad de que esto suceda se eleva al 2.275\%, citamos esto para tener una noción general de cuanto deberían valer los valores buscados.
+% El comando \% sirve para mostrar el símbolo de porcentaje (\%)
+
+En cuanto a la interpolación lineal (\textbf{trapecios compuesta}), podemos notar que a medida que aumenta el salto, el valor de la probabilidad va variando en pequeños números. A mayor sea el salto, mayor será el valor de probabilidad. Esto se debe en gran medida a que al ser una función decreciente con concavidad positiva en gran parte del intervalo a integrar, al hacer una interpolación lineal, la recta se hará siempre por encima de la curva original, lo cual nos da un área a integrar mucho mayor. Como podemos ver, sin importar el valor de \textit{h} que usemos, el valor se mantiene relativamente restringido, logrando una aproximación de 4 cifras significativas respecto a los valores tabulados con un espaciamiento de \textit{h} = 0.1 (ver Tabla \ref{tab:tabladisc}).
+
+Por otro lado, tenemos la interpolación cuadrática, donde usamos posteriormente, la \textbf{regla de Simpson compuesta}. Este método resulta más preciso que Trapecios, y permite lograr una aproximación significativa hasta la cuarta cifra (milésima del valor porcentual) con un espaciamiento de \textit{h} = 10 (ver Tabla \ref{tab:tabladisc}).
+
+\begin{table}[ht]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\multirow{2}{*}{\textbf{Salto (\textit{h})}} &  \multicolumn{2}{|c|}{\textbf{Probabilidad}} \\
+		\cline{2-3}
+		& \textbf{Según trapecios (\%)} & \textbf{Según Simpson (\%)} \\
+		\hline
+		0.01 & 2.2750132 & 2.2750132 \\
+		\hline
+		0.1 & 2.2750168 & 2.2750132 \\
+		\hline
+		10 & 2.3109830 & 2.2751134 \\
+		\hline
+		25 & 2.4989865 & 2.2798936 \\
+		\hline
+	\end{tabular}
+	\caption{Tabla comparativa de los resultados para ambos métodos}
+	\label{tab:tabladisc}
+\end{table}
+% \multirow{filas}{ancho}{contenido} escribe el texto indicado en {contenido} juntando la combinando verticalmente la cantidad de celdas indicadas en {filas}. El tamaño de la celda combinada se indica en {ancho}. Si se coloca * en {ancho}, el ancho se adapta a lo necesario.
+% \multicolumn{columnas}{alineación}{contenido} escribe el texto indicado en {contenido} juntando la combinando horizontalmente la cantidad de celdas indicadas en {columnas}. La alineación será c (centrado), l (izquierda) o r (derecha), y se le podrán incluir las | si se desean agregar los bordes verticales.
+% cline{inicio-fin} es similar a hline, pero indicando en qué columna empieza y en cuál termina esa línea. Evita un efecto de tachado en una celda combinada verticalmente
+
+En conclusión, podemos afirmar que el método de Simpson es más preciso que el de Trapecios para un mismo espaciamiento \textit{h}. Además, debido a su mayor orden, Simpson no requiere de espaciamientos demasiado pequeños para lograr una aproximación tolerable.

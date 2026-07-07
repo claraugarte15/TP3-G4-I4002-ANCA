@@ -1,0 +1,95 @@
+\chapter{Introducción}
+
+El presente trabajo práctico tiene como objetivo principal emplear técnicas de ajuste de curvas mediante el método de mínimos cuadrados para el análisis y modelado de datos de producción de un pozo petrolero. El uso de modelos matemáticos es fundamental para predecir comportamientos futuros y facilitar la toma de decisiones informadas basadas en datos. En esta introducción, se proporcionará una breve revisión teórica de los conceptos clave que se aplicarán a lo largo del trabajo, enfocándose en la importancia del ajuste de curvas y su aplicación en la industria petrolera.
+
+\section{Ajuste de Curvas} 
+
+El ajuste de curvas es una técnica esencial en el análisis de datos cuyo objetivo principal es identificar una función matemática que describa con precisión la relación entre dos o más variables. Esta técnica no solo permite comprender mejor el comportamiento de los datos observados, sino también realizar predicciones sobre valores futuros. Resulta indispensable cuando se tienen datos experimentales y se necesita desarrollar un modelo que los represente de manera adecuada. Este modelo puede ser utilizado para:
+
+\begin{itemize}
+\item \textbf{Predicción:} Estimar valores futuros basándose en la tendencia observada en los datos.
+\item \textbf{Comprensión:} Desarrollar una mejor comprensión de las relaciones entre variables.
+\item \textbf{Optimización:} Ayudar en la toma de decisiones optimizando procesos y recursos.
+\end{itemize}
+
+\section{Métodos Comunes de Ajuste de Curvas}
+
+Uno de los métodos más comunes para el ajuste de curvas es el Método de los Mínimos Cuadrados, que se basa en minimizar la suma de los cuadrados de las diferencias entre los valores observados y los valores predichos por el modelo. Este método puede ser aplicado tanto en modelos lineales como no lineales.
+
+\subsection{Tipos de Ajustes de Curva}
+
+\begin{itemize}
+    \item \textbf{Ajuste Lineal:}
+    \begin{itemize}
+        \item \textit{Modelo:} \( y = ax + b \)
+        \item \textit{Uso:} Relaciones lineales simples entre dos variables.
+    \end{itemize}
+
+    \item \textbf{Ajuste Polinómico:}
+    \begin{itemize}
+        \item \textit{Modelos:} \( y = ax^2 + bx + c \) (cuadrático), \( y = ax^3 + bx^2 + cx + d \) (cúbico), etc.
+        \item \textit{Uso:} Datos que muestran curvaturas y tendencias no lineales.
+    \end{itemize}
+
+    \item \textbf{Ajuste Logarítmico:}
+    \begin{itemize}
+        \item \textit{Modelo:} \( y = a \ln(x) + b \)
+        \item \textit{Uso:} Datos que aumentan rápidamente y luego se estabilizan.
+    \end{itemize}
+
+    \item \textbf{Ajuste Exponencial:}
+    \begin{itemize}
+        \item \textit{Modelo:} \( y = Ae^{Bx} \)
+        \item \textit{Uso:} Datos que crecen o decrecen a tasas que cambian exponencialmente.
+    \end{itemize}
+
+    \item \textbf{Ajuste Potencial:}
+    \begin{itemize}
+        \item \textit{Modelo:} \( y = ax^b \)
+        \item \textit{Uso:} Relaciones de tipo potencia, común en fenómenos naturales y físicos.
+    \end{itemize}
+
+\end{itemize}
+
+En este trabajo, los caudales de producción de un pozo petrolero se modelan de acuerdo con una función exponencial. Por lo tanto, nos centraremos especialmente en este tipo de ajuste de curva.
+
+\subsection{Importancia y Aplicaciones del Modelo Exponencial}
+
+El ajuste exponencial resulta especialmente útil cuando los datos muestran un crecimiento o decrecimiento acelerado. Este modelo encuentra aplicaciones extendidas en diversas áreas:
+
+\begin{itemize}
+    \item \textbf{Biología:} Crecimiento poblacional de organismos, como el crecimiento bacteriano.
+    \item \textbf{Economía:} Crecimiento económico y compuestos de interés.
+    \item \textbf{Física:} Desintegración radiactiva y enfriamiento de materiales.
+\end{itemize}
+
+\subsubsection{Ejemplo de Aplicación}
+
+Supongamos que estamos estudiando el crecimiento bacteriano en un laboratorio. La cantidad de bacterias se mide en diferentes momentos, y se espera que el crecimiento siga un modelo exponencial debido a la naturaleza de la reproducción bacteriana. Queremos ajustar un modelo exponencial de la forma \( y = Ae^{Bx} \) a los datos observados.\\
+Para ello tenemos que realizar el siguiente procedimiento:
+
+\begin{enumerate}
+\item \textbf{Recolección de Datos}
+Se registran los datos de la cantidad de bacterias (\( y \)) en diferentes tiempos (\( x \)).
+
+\newpage
+
+\item \textbf{Transformación Logarítmica}\\
+Para simplificar el ajuste, transformamos el modelo exponencial a uno lineal tomando el logaritmo natural de ambos lados de la ecuación \( y = Ae^{Bx} \):
+\[
+\ln(y) = \ln(Ae^{Bx}) = \ln(A) + Bx
+\]
+Definimos \( Y = \ln(y) \) y \( C = \ln(A) \) para obtener la forma lineal \( Y = Bx + C \).
+
+\item \textbf{Ajuste Lineal}\\
+Aplicamos el método de los mínimos cuadrados a la ecuación transformada \( Y = Bx + C \) para determinar los parámetros \( B \) y \( C \).
+
+\item \textbf{Obtención del Modelo Exponencial}\\
+Convertimos \( C \) de nuevo a \( A \) usando \( A = e^C \).
+
+\item \textbf{Predicción}\\
+Utilizamos el modelo ajustado para predecir el comportamiento futuro de la cantidad de bacterias.
+\end{enumerate}
+
+
+

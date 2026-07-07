@@ -1,0 +1,49 @@
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Resultados
+%----------------------------------------------------------------------------------------
+
+\chapter{Resultados}
+A continuación, se compararán los resultados obtenidos con Trapecios (Sección \ref{sec:restrapecios}) y Simpson (Sección \ref{sec:ressimpson}).
+
+
+\section{Método de Trapecios Compuesto} \label{sec:restrapecios}
+ 
+Utilizando el código descripto en la sección \ref{sec:imptrapecios}, la Tabla \ref{tab:tablatrap} compila los resultados obtenidos para distintos niveles de discretización:
+
+\begin{table}[h] %table: Bloque para configurar una tabla a referenciar (los corchetes, opcional, indican en que lugar de la página debe colocarse)
+	\centering %Centrado de tabla
+	\begin{tabular}{|c|c|c|c|c|} %tabular: Bloque que crea tablas
+		\hline
+		\textbf{Salto (h)} & 0.01 & 0.1 & 10 & 25 \\
+		\hline
+		\textbf{Probabilidad} & 2.2750132 & 2.2750168 & 2.3109830 & 2.4989865 \\
+		\hline
+	\end{tabular}
+	\caption{Resultados para el método de los Trapecios Compuesto} %Tal como para imágenes, \caption permite agregar una descripción
+	\label{tab:tablatrap}
+\end{table}
+% {c|c|c|c|c} indica que la tabla tiene 5 columnas, todas centradas (c), y entre columnas se coloca una línea de separación (|)
+% Las columnas pueden estar alineadas a la izquierda (l) o a la derecha (r)
+% Las | indican la colocación de bordes izquierdos o derechos en celdas, según si se colocan antes o después de c, l o r
+% Con el comando \hline genera una línea horizontal, mostrando dichos bordes horizontales para las celdas de una fila
+% Esa línea será un borde superior o inferior si se coloca arriba o abajo de los datos de la fila
+% Los & son separados de contenido (separan el texto que se muestra en una celda y el contenido de la celda de al lado)
+% Los & también tienen la utilidad de alinear las celdas de una misma columna (el segundo valor de la primera fila, 0.01, se alinea con el segundo valor de la segunda fila, 2.275013)
+% Las filas deben finalizar con \\
+
+\section{Método de Simpson Compuesto} \label{sec:ressimpson}
+
+Utilizando el código descripto en la sección \ref{sec:impsimpson}, la Tabla \ref{tab:tablasimp} compila los resultados obtenidos para distintos niveles de discretización:
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Salto (h)} & 0.01 & 0.1 & 10 & 25 \\
+		\hline
+		\textbf{Probabilidad} & 2.2750132 & 2.2750132 & 2.2751134 & 2.2798936 \\
+		\hline
+	\end{tabular}
+	\caption{Resultados para el método de Simpson Compuesto}
+	\label{tab:tablasimp}
+\end{table}

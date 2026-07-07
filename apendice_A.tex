@@ -1,0 +1,86 @@
+%----------------------------------------------------------------------------------------
+%	CONTENIDO DEL APENDICE A
+%----------------------------------------------------------------------------------------
+
+\chapter{Apéndices} %Sirve como introducción a apéndices (no colocar este comando en los demás apéndices)
+
+%----------------------------------------------------------------------------------------
+%	LISTA DE URL DE LIKS COMPARTIDOS DE NOTEBOOKS USADAS - Colocar los Colab usados por cada alumno
+%----------------------------------------------------------------------------------------
+% En este bloque de líneas, escribir únicamente el link de su Colab en la última llave de las líneas newcommand
+% No editar ninuan otra cosa del bloque
+% Si un link posee un símbolo de porcentaje (%), anteponerle a cada % una barra invertida (\)
+
+\ifx \AlumnoPrimero \undefined {}
+\else
+\newcommand{\URLColabAlumnoPrimero}{https://colab.research.google.com/drive/1EjsrVm7dvO7K8_Coc5gVHMeuvLg95MTp?usp=sharing}
+\fi
+\ifx \AlumnoSegundo \undefined {}
+\else
+\newcommand{\URLColabAlumnoSegundo}{https://colab.research.google.com/}
+\fi
+\ifx \AlumnoTercero \undefined {}
+\else
+\newcommand{\URLColabAlumnoTercero}{https://frba.utn.edu.ar/investigacion/becas-de-investigacion/}
+\fi
+\ifx \AlumnoCuarto \undefined {}
+\else
+\newcommand{\URLColabAlumnoCuarto}{https://es.wikipedia.org/wiki/An\%C3\%A1lisis_matem\%C3\%A1tico}
+\fi
+\ifx \AlumnoQuinto \undefined {}
+\else
+\newcommand{\URLColabAlumnoQuinto}{https://aulasvirtuales.frba.utn.edu.ar/}
+\fi
+\ifx \AlumnoSexto \undefined {}
+\else
+\newcommand{\URLColabAlumnoSexto}{https://guarani.frba.utn.edu.ar/autogestion/grado/}
+\fi
+\ifx \AlumnoSeptimo \undefined {}
+\else
+\newcommand{\URLColabAlumnoSeptimo}{https://www.xm1math.net/texmaker/}
+\fi
+\ifx \AlumnoOctavo \undefined {}
+\else
+\newcommand{\URLColabAlumnoOctavo}{https://miktex.org/}
+\fi
+
+% NO EDITAR LAS SIGUIENTES LÍNEAS
+
+\section{Notebooks de Colab} \label{sec:Colab}
+
+A continuación, se enumeran las notebooks donde se desarrollaron los códigos mencionados en este documento:
+\begin{itemize}
+	\ifx \AlumnoPrimero \undefined {}
+	\else
+	\item \href{\URLColabAlumnoPrimero}{\underline{Notebook de \AlumnoPrimero}}
+	\fi
+	\ifx \AlumnoSegundo \undefined {}
+	\else
+	\item \href{\URLColabAlumnoSegundo}{\underline{Notebook de \AlumnoSegundo}}
+	\fi
+	\ifx \AlumnoTercero \undefined {}
+	\else
+	\item \href{\URLColabAlumnoTercero}{\underline{Notebook de \AlumnoTercero}}
+	\fi
+	\ifx \AlumnoCuarto \undefined {}
+	\else
+	\item \href{\URLColabAlumnoCuarto}{\underline{Notebook de \AlumnoCuarto}}
+	\fi
+	\ifx \AlumnoQuinto \undefined {}
+	\else
+	\item \href{\URLColabAlumnoQuinto}{\underline{Notebook de \AlumnoQuinto}}
+	\fi
+	\ifx \AlumnoSexto \undefined {}
+	\else
+	\item \href{\URLColabAlumnoSexto}{\underline{Notebook de \AlumnoSexto}}
+	\fi
+	\ifx \AlumnoSeptimo \undefined {}
+	\else
+	\item \href{\URLColabAlumnoSeptimo}{\underline{Notebook de \AlumnoSeptimo}}
+	\fi
+	\ifx \AlumnoOctavo \undefined {}
+	\else
+	\item \href{\URLColabAlumnoOctavo}{\underline{Notebook de \AlumnoOctavo}}
+	\fi
+\end{itemize}
+

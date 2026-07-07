@@ -1,0 +1,60 @@
+%----------------------------------------------------------------------------------------
+% MODELO GENÉRICO DE REFERENCIAS
+%@estilo{etiqueta, %La etiqueta es una palabra con la que se identifica a la referencia cuando quiera citarse con \cite
+%  author = {Ape 1, Nom 1 and Ape 2, Nom 2 and {Org 1}}, %Cada autor debe serpararse por and (si una organización es autor, escribir entre llaves)
+%  editor = {Editor 1 and Editor 2 and Editor 3}, %Utilizado para libros (estilos bookm inbook, incollection)
+%  title = {Título de la referencia},
+%  booktitle = {Título de libro}, %Utilizado en booktitle (en title irá el título del capítulo referenciado)
+%  publisher = {Editorial}, %Utilizado para libros (estilos book, inbook, incollection)
+%  note = {Nota aclaratoria}, %Utilizado en manual para indicar número de norma y link (el link se agrega con \url)
+%  year = {Año de la referencia},
+%  edition = {Edición}, %Utilizado para libros (estilos bookm inbook, incollection) y normas (estilo manual)
+%  chapter = {Nº de capítulo de libro}, %Utilizado en inbook o incollection
+%  pages = {Nº de páginas del capítulo de la referencia}, %Utilizado en inbook o incollection
+%  url = {Link de página web}, %Utilizado en misc
+%  urldate = {Fecha en la que se visitó una página web en formato AAAA-MM-DD}, %Utilizado en misc
+%  howpublished = {Nota indicando donde se halló la referencia} %Utilizado en booklet (puede incluir link con \url)
+%}
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% REFERENCIAS
+%----------------------------------------------------------------------------------------
+% Los siguientes ejemplos son a modo ilustrativo y pueden tomarse como base para las referencias que necesiten agregarse
+% los parámetros vacíos, aquellos {} (sin valor entre llaves), se ignoran
+
+%Apuntes
+@booklet{AjustedeCurvas,
+  author = {Jouglard, Claudio and Marinzalda, Federico},
+  title = {Ajuste de Curvas},
+  year = {2024},
+  howpublished = {Publicado en Aula Virtual de Análisis Numérico (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/72916/mod_resource/content/1/Ajuste\%20de\%20Curvas.pdf})},
+}
+@booklet{Latex,
+author = {Jouglard, Claudio},
+  title = {Ejemplos en Latex},
+  year = {2020},
+  howpublished = {Publicado en Aula Virtual de Análisis Numérico y Cálculo Avanzado (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/3255374/mod_resource/content/1/EYMIE-TT-LN-02.pdf})},
+}
+
+%Página web
+@misc{Canal,
+  author  = {{Cálculo Avanzado}},
+  title   = {Teoría 03 - Industrial - Ajuste de Funciones},
+  year = {2023},
+  url     = {https://youtube.com/playlist?list=PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW&si=P4BGkNlDgYLkbI1r},
+  urldate = {2024-07-03},
+  }
+
+%Para citar una notebook de Colab en el capítulo Implementación, seguir este formato:
+% La etiqueta puede llamarse Colab
+% En author, escribir su Apellido y Nombre, separado por coma
+% En title, escribir el nombre de la notebook (sin la extensión .ipynb)
+% En year, escribir el año del ciclo lectivo
+% En url, pegar el link de la notebook
+@misc{Colab,
+  author  = {4 Grupo},
+  title   = {TP3 - Colab Grupo 4},
+  year = {2024},
+  url     = {https://colab.research.google.com/drive/1-Ikn_xPvEDBBK_0eOnWAW5Hj8gZwkCO7?usp=sharing},
+}

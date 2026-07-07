@@ -1,0 +1,31 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Ajuste de Curvas}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Métodos Comunes de Ajuste de Curvas}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Tipos de Ajustes de Curva}{2}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Importancia y Aplicaciones del Modelo Exponencial}{2}{subsection.1.2.2}%
+\contentsline {subsubsection}{Ejemplo de Aplicación}{2}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Implementación}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Paquetes Utilizados}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Código del cálculo de t para una determinada fecha}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Código Ajuste de Curva}{5}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Códigos del Punto 1}{6}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Fecha de cierre del pozo}{6}{subsection.2.4.1}%
+\contentsline {section}{\numberline {2.5}Códigos del Punto 2}{7}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Cálculo de la producción acumulada remanente, producción acumulada extraída, producción acumulada total y porcentaje remanente}{7}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Código del gráfico circular}{7}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Códigos del Punto 3}{8}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Cálculos para la producción acumulada y días correspondientes al 50\% del volumen total}{8}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Fecha del 50\% del volumen total}{8}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Código del Punto 4}{8}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Cálculo del valor de la producción acumulada remanente}{8}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.8}Código del Punto 5}{9}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Cálculo de la producción acumulada en un determinado año}{9}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Gráfico de barras}{11}{subsection.2.8.2}%
+\contentsline {chapter}{\numberline {3}Resultados}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Método de Trapecios Compuesto}{12}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Método de Simpson Compuesto}{12}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Discusión}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {A}Apéndices}{15}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Notebooks de Colab}{15}{section.Alph1.1}%
+\contentsline {chapter}{Bibliografía}{16}{appendix*.10}%

@@ -1,0 +1,293 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/apasortcite//global/global/global}
+    \entry{Canal}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a32bab1793b8f5f34559714a71976a5a}{%
+           family={{Cálculo Avanzado}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{fullhash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{fullhashraw}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{bibnamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorbibnamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authornamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorfullhash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorfullhashraw}{a32bab1793b8f5f34559714a71976a5a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teoría 03 - Industrial - Ajuste de Funciones}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://youtube.com/playlist?list=PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW&si=P4BGkNlDgYLkbI1r
+      \endverb
+      \verb{url}
+      \verb https://youtube.com/playlist?list=PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW&si=P4BGkNlDgYLkbI1r
+      \endverb
+    \endentry
+    \entry{Colab}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40cd4b9b1aca8a2f96cac13cac8d4215}{%
+           family={Grupo},
+           familyi={G\bibinitperiod},
+           given={4},
+           giveni={4\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{fullhash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{fullhashraw}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{bibnamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorbibnamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authornamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorfullhash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorfullhashraw}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TP3 - Colab Grupo 4}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://colab.research.google.com/drive/1-Ikn_xPvEDBBK_0eOnWAW5Hj8gZwkCO7?usp=sharing
+      \endverb
+      \verb{url}
+      \verb https://colab.research.google.com/drive/1-Ikn_xPvEDBBK_0eOnWAW5Hj8gZwkCO7?usp=sharing
+      \endverb
+    \endentry
+    \entry{Latex}{booklet}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=af211f21e12f6c5c4a80d2fc9c8c9a7c}{%
+           family={Jouglard},
+           familyi={J\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{fullhash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{fullhashraw}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{bibnamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorbibnamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authornamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorfullhash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorfullhashraw}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Publicado en Aula Virtual de Análisis Numérico y Cálculo Avanzado (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/3255374/mod_resource/content/1/EYMIE-TT-LN-02.pdf})}
+      \field{title}{Ejemplos en Latex}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{AjustedeCurvas}{booklet}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=af211f21e12f6c5c4a80d2fc9c8c9a7c}{%
+           family={Jouglard},
+           familyi={J\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77e73fd193ef0f72d3327294aec7c211}{%
+           family={Marinzalda},
+           familyi={M\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b534705416416e529dac1670aabdbd12}
+      \strng{fullhash}{b534705416416e529dac1670aabdbd12}
+      \strng{fullhashraw}{b534705416416e529dac1670aabdbd12}
+      \strng{bibnamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorbibnamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authornamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorfullhash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorfullhashraw}{b534705416416e529dac1670aabdbd12}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Publicado en Aula Virtual de Análisis Numérico (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/72916/mod_resource/content/1/Ajuste\%20de\%20Curvas.pdf})}
+      \field{title}{Ajuste de Curvas}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+  \enddatalist
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Canal}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a32bab1793b8f5f34559714a71976a5a}{%
+           family={{Cálculo Avanzado}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{fullhash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{fullhashraw}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{bibnamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorbibnamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authornamehash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorfullhash}{a32bab1793b8f5f34559714a71976a5a}
+      \strng{authorfullhashraw}{a32bab1793b8f5f34559714a71976a5a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Teoría 03 - Industrial - Ajuste de Funciones}
+      \field{urlday}{3}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://youtube.com/playlist?list=PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW&si=P4BGkNlDgYLkbI1r
+      \endverb
+      \verb{url}
+      \verb https://youtube.com/playlist?list=PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW&si=P4BGkNlDgYLkbI1r
+      \endverb
+    \endentry
+    \entry{Colab}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=40cd4b9b1aca8a2f96cac13cac8d4215}{%
+           family={Grupo},
+           familyi={G\bibinitperiod},
+           given={4},
+           giveni={4\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{fullhash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{fullhashraw}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{bibnamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorbibnamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authornamehash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorfullhash}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \strng{authorfullhashraw}{40cd4b9b1aca8a2f96cac13cac8d4215}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TP3 - Colab Grupo 4}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://colab.research.google.com/drive/1-Ikn_xPvEDBBK_0eOnWAW5Hj8gZwkCO7?usp=sharing
+      \endverb
+      \verb{url}
+      \verb https://colab.research.google.com/drive/1-Ikn_xPvEDBBK_0eOnWAW5Hj8gZwkCO7?usp=sharing
+      \endverb
+    \endentry
+    \entry{Latex}{booklet}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=af211f21e12f6c5c4a80d2fc9c8c9a7c}{%
+           family={Jouglard},
+           familyi={J\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{fullhash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{fullhashraw}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{bibnamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorbibnamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authornamehash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorfullhash}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \strng{authorfullhashraw}{af211f21e12f6c5c4a80d2fc9c8c9a7c}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Publicado en Aula Virtual de Análisis Numérico y Cálculo Avanzado (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/3255374/mod_resource/content/1/EYMIE-TT-LN-02.pdf})}
+      \field{title}{Ejemplos en Latex}
+      \field{year}{2020}
+      \true{nocite}
+    \endentry
+    \entry{AjustedeCurvas}{booklet}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=af211f21e12f6c5c4a80d2fc9c8c9a7c}{%
+           family={Jouglard},
+           familyi={J\bibinitperiod},
+           given={Claudio},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=77e73fd193ef0f72d3327294aec7c211}{%
+           family={Marinzalda},
+           familyi={M\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b534705416416e529dac1670aabdbd12}
+      \strng{fullhash}{b534705416416e529dac1670aabdbd12}
+      \strng{fullhashraw}{b534705416416e529dac1670aabdbd12}
+      \strng{bibnamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorbibnamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authornamehash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorfullhash}{b534705416416e529dac1670aabdbd12}
+      \strng{authorfullhashraw}{b534705416416e529dac1670aabdbd12}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Publicado en Aula Virtual de Análisis Numérico (\url{https://aulasvirtuales.frba.utn.edu.ar/pluginfile.php/72916/mod_resource/content/1/Ajuste\%20de\%20Curvas.pdf})}
+      \field{title}{Ajuste de Curvas}
+      \field{year}{2024}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

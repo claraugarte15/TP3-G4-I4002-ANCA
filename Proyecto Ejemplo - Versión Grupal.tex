@@ -1,0 +1,292 @@
+%----------------------------------------------------------------------------------------
+% DOCUMENTO MAESTRO
+% Informes de TP
+% Ver líneas 153 a 184 para configurar los datos del Informe
+% Para configurar este archivo como documento maestro:
+% 1) Clic en Opciones
+% 2) Clic en Definir documento actual como 'documento maestro'
+% Hacer estos pasos siempre que se abra el archivo, antes de compilar para generar el PDF
+%
+% Pasos para compilación:
+% 1) Revisar que la compilación rápida esté correctamente configurada
+%    a) Clic en Opciones
+%    b) Clic en Configurar Texmaker
+%    c) Clic en Compilación rápida
+%    d) Marcar opción PdfLaTeX + Bib(la)tex + PdfLaTeX (x2) + Ver PDF
+% 2) Clic en Inicial ("botón de play" que se encuentra antes de "Compilación rápida")
+%
+% Importante - Usar biber en Texmaker para incluir referencias:
+% 1) Clic en Opciones
+% 2) Clic en Configurar Texmaker
+% 3) Clic en Órdenes
+% 4) En Bib(la)tex, escribir <biber %> (sin los signos menor y mayor)
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% Creación del Preámbulo
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry} %geometry: Definición de márgenes
+\usepackage{titling}  %titling: para configurar título en pagina de tapa
+\usepackage{authblk}  %authblk: para configurar nombres y afiliaciones de autores
+
+%----------------------------------------------------------------------------------------
+% Idiomas - Definición del idioma o idiomas del documento con paquete babel
+%----------------------------------------------------------------------------------------
+
+\usepackage[english,spanish,es-tabla,es-lcroman]{babel}
+
+%----------------------------------------------------------------------------------------
+% Idiomas - Reconocimiento de caracteres en español
+%----------------------------------------------------------------------------------------
+
+\usepackage[utf8]{inputenc} %inputenc: Reconoce entrada caracteres internacionales - iso-8889-1
+\usepackage[T1]{fontenc} %fontenc: Para salida mejorada caracteres internacionales
+\usepackage{lmodern} %lmodern: Familia de fuentes que aporta fuentes faltantes en T1
+
+%----------------------------------------------------------------------------------------
+% Paquetes para formato del documento
+%----------------------------------------------------------------------------------------
+
+\usepackage{graphicx} %graphicx: Para incluir figuras
+\usepackage{float}    %float: para tablas y figuras flotantes (que entran en una pagina)
+\usepackage[font=small]{caption} %caption: para configurar tamaño de descripciones de figuras y tablas
+\usepackage{subcaption} %subcaption: para insertar multiple figuras
+\usepackage{parskip}  %parkskip: Para separar parrafos con línea en blanco
+\parskip=6pt 
+
+\usepackage[hidelinks]{hyperref} %hyperref: genera hipervínculos a titulos, figuras, ecuaciones
+\hypersetup{         %hypersetup: metadata (configuraciones) para PDF
+   colorlinks=false, %colorlinks: colorear (true) o no (false) citas
+   linktoc=all,      %linktoc: agrega link a cada sección (all: el link se incluye tanto en el nombre de la sección como en el Nº de página)
+   linkcolor=blue,   %linkcolor: para elegir color de links internos
+}
+
+\usepackage{titlesec}  %titlesec: Formato de títulos de capítulos para eliminar la palabra "Capítulo" de títulos
+\usepackage{framed} %framed: Para enmarcar paragrafos
+\usepackage{breakcites} %para cortar referencias muy largas
+
+%----------------------------------------------------------------------------------------
+% Paquetes para ecuaciones y tablas
+%----------------------------------------------------------------------------------------
+
+\usepackage{amsmath} % amsmath: paquete para escribir ecuaciones matemáticas 
+\usepackage{amssymb} % amssymb: paquete de simbolos matemáticos
+\usepackage{mathtools} % mathtools: paquete de mejoras para ecuaciones (amsmath)  
+
+\usepackage[fleqn]{empheq} % empheq: paquete para remarcar ecuaciones y subescuaciones
+\usepackage{nccmath} % nccmath: Paquete que amplía funciones de amsmath
+
+\usepackage{booktabs} % booktabs: para lineas de separación en tablas
+\usepackage{siunitx}  % siunitx: numeros en notación científica y unidades
+
+\usepackage{multirow} % multirow: para crear celdas combinadas en tablas
+
+\usepackage{enumerate} % enumerate: para hacer listas enumeradas y con viñetas
+\usepackage{enumitem} % enumitem: para configurar listas enumeradas y con viñetas
+
+%----------------------------------------------------------------------------------------
+% Paquetes para listado de programas
+%----------------------------------------------------------------------------------------
+
+\usepackage{listings}
+\usepackage{xcolor}
+ 
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=t,                    
+    keepspaces=true,                 
+    %numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\renewcommand{\lstlistingname}{Código} % título de caption en español
+
+\lstset{literate=        % definición de letras acentuadas y símbolos en listados
+  {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+  {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+  {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+  {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+  {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+  {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+  {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+  {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+  {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+  {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+  {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+  {€}{{\EUR}}1 {£}{{\pounds}}1 {Ñ}{{\~ N}}1 {ñ}{{\~ n}}1
+}
+
+%----------------------------------------------------------------------------------------
+% Programción de formatos condicionales
+%----------------------------------------------------------------------------------------
+
+\usepackage{ifthen}
+
+%----------------------------------------------------------------------------------------
+% Paquete para Bibliografía
+%----------------------------------------------------------------------------------------
+
+\usepackage{csquotes} % csquotes: ampliación de biblatex, necesario para evitar conflictos entre paquetes
+\usepackage[style=apa,natbib,sorting=nty]{biblatex} % biblatex: configuración de citas y referencias.
+\addbibresource{referencias.bib} % Se llama al archivo con referencias (debe estar completado y guardado en la misma carpeta que el tex principal)
+
+%----------------------------------------------------------------------------------------
+%	CONTENIDO DEL TP - DATOS DEL INFORME
+%----------------------------------------------------------------------------------------
+
+\newcommand{\TPN}{3}
+\newcommand{\TPTitulo}{Ajuste de funciones}
+\newcommand{\Curso}{I4002}
+\newcommand{\Grupo}{4}
+\newcommand{\CicloLectivo}{2026}
+\newcommand{\EntregaDia}{28}
+\newcommand{\EntregaMes}{7} %Escribir en número
+
+%----------------------------------------------------------------------------------------
+%	CONTENIDO DEL TP - DATOS DE AUTORES Y LEGAJOS (comentar no existentes)
+%----------------------------------------------------------------------------------------
+% El orden que enmueran a los integrantes es importante para definir datos y ejercicios individuales (de haber)
+\newcommand{\AlumnoPrimero}{Clara Ugarte}
+\newcommand{\LegajoPrimero}{209.634-1}
+\newcommand{\AlumnoSegundo}{Micaela Toros}
+\newcommand{\LegajoSegundo}{214.949-7}
+\newcommand{\AlumnoTercero}{Yara Cuba}
+\newcommand{\LegajoTercero}{214.840-7}
+\newcommand{\AlumnoCuarto}{Tiziana Lanzani}
+\newcommand{\LegajoCuarto}{213.819-0}
+\newcommand{\AlumnoQuinto}{}
+\newcommand{\LegajoQuinto}{}
+%\newcommand{\AlumnoSexto}{Pedro Perez}
+%\newcommand{\LegajoSexto}{2}
+%\newcommand{\AlumnoSeptimo}{John Perez}
+%\newcommand{\LegajoSeptimo}{2}
+%\newcommand{\AlumnoOctavo}{Richard Perez}
+%\newcommand{\LegajoOctavo}{4}
+
+%%---------------------------------------------------------------------
+% Contenido del Informe 
+%
+% Incluye:
+%          Tapa (tapa con datos configurables)
+%          Índice 
+%          Lista de figuras (OPCIONAL)
+%          Lista de tablas (OPCIONAL)
+%          Capítulos
+%                    Introducción
+%                    Implementación
+%                    Resultados
+%                    Discusión
+%                    Referencias
+%%----------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe: Inclusión, si se desea, de listas figuras y de tablas
+%----------------------------------------------------------------------------------------
+\newcommand{\IncluirListaFiguras}{} % comentar si no hay imágenes en el PDF (agregar un % al inicio de la línea)
+\newcommand{\IncluirListaTablas}{}  % comentar si no hay tablas en el PDF (agregar un % al inicio de la línea)
+\newcommand{\IncluirListaCodigos}{}
+
+%----------------------------------------------------------------------------------------
+% Inicio del Informe
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Tapa (el archivo tapa.tex NO se debe editar)
+%----------------------------------------------------------------------------------------
+\include{tapa} % Se agrega el contenido del archivo tapa.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+% Numerar con números romanos empezando desde la Página 2
+%----------------------------------------------------------------------------------------
+\thispagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+%----------------------------------------------------------------------------------------
+% Guardar número de página
+%----------------------------------------------------------------------------------------
+\newcounter{mypageno}
+\setcounter{mypageno}{\value{page}}%
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Índice (el archivo indice.tex NO se debe editar)
+%----------------------------------------------------------------------------------------
+\include{indice} % Se agrega el contenido del archivo indice.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+% Cambiar a numeración arábiga
+%----------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+\begingroup % Se definen configuraciones específicamente para un bloque de código (el bloque finaliza con \endgroup)
+
+%----------------------------------------------------------------------------------------
+% Configuración para que no apaezca la palabra Chapter en cada capítulo
+%----------------------------------------------------------------------------------------
+\titleformat{\chapter}[display]{\Huge\bfseries}{}{0pt}{\thechapter.\ }
+\titleformat{name=\chapter,numberless}[display]{\Huge\bfseries}{}{0pt}{}
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Introducción (Completar archivo intro.tex)
+%----------------------------------------------------------------------------------------
+\include{intro} % Se agrega el contenido del archivo intro.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Implementación (Completar archivo implement.tex)
+%----------------------------------------------------------------------------------------
+\include{implement} % Se agrega el contenido del archivo implement.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Resultados (Completar archivo resultados.tex)
+%----------------------------------------------------------------------------------------
+\include{resultados} % Se agrega el contenido del archivo resultados.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Discusión (Completar archivo discusion.tex)
+%----------------------------------------------------------------------------------------
+\include{discusion} % Se agrega el contenido del archivo discusion.tex (debe estar en la misma carpeta del documento maestro)
+
+%----------------------------------------------------------------------------------------
+%	CONTENIDO DE LA GUIA - APÉNDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Le indica a LaTeX que los siguientes "capítulos" son apéndices
+\renewcommand{\thechapter}{\Alph{chapter}}
+\renewcommand{\thesection}{\Alph{chapter}.\arabic{section}}
+% Incluir los apéndices como archivos separados
+% Descomentar y/o agregar las líneas para incluir nuevos apéndices
+
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Apéndice A (Completar archivo apendice_A.tex)
+%----------------------------------------------------------------------------------------
+\include{apendice_A} % Se agrega el contenido del archivo apendice_A.tex (debe estar en la misma carpeta del documento maestro)
+
+\endgroup
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Discusión (Completar archivo referencias.bib) 
+%----------------------------------------------------------------------------------------
+\printbibliography[heading=bibintoc,title={Bibliografía}]  % heading=bibintoc indica incluir en índice; title define cómo se nombra a la sección
+\nocite{*} % nocite indica incluir en bibliografia referencias no citadas en el cuerpo del texto
+
+
+\end{document}

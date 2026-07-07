@@ -1,0 +1,344 @@
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Implementación
+%----------------------------------------------------------------------------------------
+
+\chapter{Implementación}
+
+Los códigos que se indican a continuación fueron escritos en notebooks de Colab (ver Apéndice \ref{sec:Colab}).
+% \citep{Colab} permite citar a la notebook donde se escribieron los códigos.
+% Ver en referencias.bib el formato con el que debe configurarse la referencia.
+
+En la siguiente tabla se muestra los valores de producción correspondientes al valor $M=4$.
+
+\begin{table}[h] 
+	\centering 
+	\begin{tabular}{|c|c|c|}
+		\toprule
+		Fecha & Producción $[m^3/d]$  \\
+		\midrule
+		Enero 2018   & $289$ \\ \hline
+		Julio 2018   & $257$ \\ \hline
+		Enero 2019   & $213$ \\ \hline
+		Julio 2019   & $182$ \\ \hline
+		Enero 2020   & $155$ \\ \hline
+		Julio 2020   & $137$ \\ \hline
+		Enero 2021   & $126$ \\ \hline
+		Julio 2021   & $115$  \\ \hline
+		Enero 2022   & $103$  \\ \hline
+		Julio 2022   & $96$  \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Paquetes Utilizados}
+Para empezar, se indican los paquetes que serán necesarios importar para la ejecución de los códigos.
+
+\begin{lstlisting}[language=Python,frame=single,caption=Importación de paquetes,label={cod:paquete}]
+import numpy as np
+import pandas as pd
+from scipy import linalg
+from matplotlib import pyplot as plt
+
+import inspect
+from datetime import datetime , timedelta
+\end{lstlisting}
+
+
+
+
+\section{Código del cálculo de t para una determinada fecha}
+
+Cargamos el cálculo de t para una determinada fecha con el siguiente código:
+
+\begin{lstlisting}[language=Python,frame=single,caption=Calculo de t,label={cod:calct}] 
+fecha = '01/09/2022' # Escribir la fecha como cadena (entre comillas) con el formato DD/MM/AAAA
+# No editar las siguientes líneas
+fechadt = datetime.strptime(fecha , '%d/%m/%Y')
+diferencia = fechadt - datetime.strptime('31/12/2017' , '%d/%m/%Y')
+t = diferencia.days
+print(fecha , '--> t =' , t)
+\end{lstlisting}
+
+
+
+\section{Código Ajuste de Curva} 
+
+Realizamos el ajuste de curva correspondiente con el siguiente código:
+
+\begin{lstlisting}[language=Python,frame=single,caption=Ajuste de curva,label={cod:ajustecurva}] 
+#Promedio de legajos = 7,25 (redondeamos a 7)
+
+# Ingresar en la siguiente lista los datos de absicas (x / variable independiente)
+xdata = [1,182,366,547,731,913,1097,1278,1462,1643]
+# Ingresar en la siguiente lista los datos de ordenadas (y / variable dependiente)
+ydata = [289,257,213,182, 155, 137, 126, 115, 103, 96]
+# Definir valor de variable independiente cuya estimación se desea calcular
+xest = 1705
+
+# No editar las siguientes líneas
+assert len(xdata)==len(ydata), 'Los vectores x e y deben ser de la misma longitud'
+
+xlin = np.array(xdata)
+ylin = np.log(ydata)
+coeflin = np.polyfit(xlin,ylin,1)
+
+A = np.exp(coeflin[1])
+B = coeflin[0]
+
+print("Ecuación de ajuste:")
+ecuacion = 'f(x) = ' + str(A) + ' * e ^ (' + str(B) + ' * x)'
+print(ecuacion)
+
+xcurva = np.linspace(min(xdata),max(xdata),50)
+ycurva = A * np.exp(B * xcurva)
+yajuste = A * np.exp(B * np.array(xdata))
+yest = A * np.exp(B * xest)
+
+error = np.absolute(ydata - yajuste)
+ecuad = error ** 2
+ecm = np.mean(ecuad)
+print("\nError cuadrático medio =" , ecm)
+
+print("\nEstimación para x =" , xest)
+print("f(" , xest , ") =" , yest , "\n")
+
+plt.scatter(xdata,ydata,color='k',label='Datos')
+plt.plot(xcurva,ycurva,'-r',label='Curva de ajuste')
+plt.title('Ajuste exponencial')
+plt.legend()
+plt.show()
+
+tabla = pd.DataFrame({"$x_i$ (datos)":xdata,"$y_i$ (datos)":ydata,"$f(x_i)$ (ajustes)":yajuste,"Error = |$y_i$ - $f(x_i)$|":error,"$Error^2$":ecuad})
+print(tabla.to_latex(index=False,column_format='ccccc'))
+tabla = tabla.rename(columns={"$x_i$ (datos)":"xi (datos)","$y_i$ (datos)":"yi (datos)","$f(x_i)$ (ajustes)":"f(xi) (ajustes)","Error = |$y_i$ - $f(x_i)$|":"Error = |yi - f(xi)|","$Error^2$":"Error^2"})
+tabla.style.hide(axis=0)
+\end{lstlisting}
+
+
+
+
+\section{Códigos del Punto 1}
+
+\subsection{Fecha de cierre del pozo}
+A partir de los siguientes códigos se puede saber hasta que fecha se puede mantener el pozo abierto si consideramos que el caudal mínimo para compensar los costos de producción es de $4\frac{m^{3}}{d}$
+
+\begin{lstlisting}[language=Python,frame=single,caption=Cálculo de cantidad de días de operación del pozo,label={cod:cantdiascierre}] 
+# Q = a * e^(b * t)
+# Q = 4 (m^3)/d
+
+tcierre = np.floor(np.log(4/A) / B )
+print("La cantidad de días de operacion del pozo son:", tcierre)
+
+tcierre # No editar esta línea
+\end{lstlisting}
+
+\begin{lstlisting}[language=Python,frame=single,caption=Calculo de fecha de cierre a partir del valor de días calculado,label={cod:fechacierre}] 
+fechacierre = datetime.strptime('31/12/2017' , '%d/%m/%Y') + timedelta(days=tcierre)
+print('Fecha de cierre:',fechacierre.strftime('%d/%m/%Y'))
+yearcierre = int(fechacierre.strftime('%Y'))
+print('Año de cierre (variable yearcierre, puede usarse en gráfico del Punto 5):',yearcierre)
+\end{lstlisting}
+
+
+
+\newpage
+
+\section{Códigos del Punto 2} 
+
+\subsection{Cálculo de la producción acumulada remanente, producción acumulada extraída, producción acumulada total y porcentaje remanente}
+
+A partir del siguiente código se muestra las operaciones necesarias para completar el punto 2.
+
+\begin{lstlisting}[language=Python,frame=single,caption= Cálculos de producción ,label={cod:punto2}] 
+# Escribir en la siguiente línea el cálculo para determinar la producción acumulada remanente
+remanente = A * (np.exp(B*tcierre) - np.exp(B*1643)) / B
+# No editar siguiente línea
+print("Producción acumulada remanente =" , remanente , 'm3')
+
+# Escribir en la siguiente línea el cálculo para determinar la producción acumulada extraída
+extraida = A * (np.exp(B*1643) - np.exp(B*1)) / B
+# No editar siguiente línea
+print("Producción acumulada remanente =" , extraida , 'm3')
+
+# Escribir en la siguiente línea el cálculo para determinar la producción acumulada total
+total = A * (np.exp(B*tcierre) - np.exp(B*1)) / B
+# No editar siguiente línea
+print("Producción acumulada total =" , total , 'm3')
+
+# Escribir en la siguiente línea el cálculo para determinar el porcentaje remanente
+porc = (remanente / total) * 100
+# No editar siguiente línea
+print("Porcentaje de producción acumulada remanente =" , porc , '%')
+\end{lstlisting}
+
+\subsection{Código del gráfico circular} 
+
+Para obtener el gráfico circular (de torta) con la producción acumulada remanente y la producción acumulada extraída se utilizó el siguiente código.
+
+\begin{lstlisting}[language=Python,frame=single,caption= Gráfico de torta ,label={cod:graftorta}] 
+etiquetas=['Extraida','Remanente']
+volumenes=[extraida,remanente]
+plt.pie(volumenes,autopct='%.1f%%',labels=etiquetas)
+plt.title('Producción Acumulada')
+plt.show()
+\end{lstlisting}
+
+\section{Códigos del Punto 3} 
+
+\subsection{Cálculos para la producción acumulada y días correspondientes al 50\% del volumen total}
+
+Con el siguiente código se obtiene la producción acumulada correspondiente al 50\% del total y en cuántos días desde el inicio de la producción se llega a ese volumen.
+
+\begin{lstlisting}[language=Python,frame=single,caption=Producción acumulada y días al 50\% del total ,label={cod:diasvol50}] 
+vol50 = total/2  # Escribir acá cálculo o valor del 50% de la producción acumulada total
+print("El valor del 50% del volumen total es:", vol50)
+# Escribir desde acá los cálculos para obtener la cantidad de días que se tarda en alcanzar el 50% del volumen total
+# Guardar resultado final en variable t50
+
+t50 = (np.log(vol50*(B/A) + np.exp(B*1))) / B # No editar esta línea
+print("La cantidad de días  para alcanzar el 50% del volumen total es:", np.ceil(t50))
+t50 # No editar esta línea
+\end{lstlisting}
+
+\subsection{Fecha del 50\% del volumen total}
+
+Con el siguiente código se calcula la fecha en la que se alcanza el 50\% del volumen total a partir del valor calculado en \ref{cod:diasvol50}.
+
+\begin{lstlisting}[language=Python,frame=single,caption=Fecha del 50\% del volumen total ,label={cod:fechavol50}] 
+fechacierre = datetime.strptime('31/12/2017' , '%d/%m/%Y') + timedelta(days=t50)
+print('Fecha para alcanzar el 50% del volumen total:',fechacierre.strftime('%d/%m/%Y'))
+\end{lstlisting}
+
+
+\section{Código del Punto 4} 
+
+\subsection{Cálculo del valor de la producción acumulada remanente}
+
+Para saber cual es el valor en US\$ de la producción acumulada remanente se usó el código:
+
+\begin{lstlisting}[language=Python,frame=single,caption=Valor de la producción acumulada remanente ,label={cod:valremanente}] 
+#-----------------------------------------------
+# Valor de la producción acumulada remanente 
+#-----------------------------------------------
+# Escribir en la siguiente línea el cálculo del valor en US$ de la producción acumulada remanente
+volbarriles = R * 6.28981 # Cantidad de barriles
+valorrem = volbarriles * 55
+print('Valor de producción acumulada remanente = US$',valorrem) # No editar esta líena
+\end{lstlisting}
+
+\newpage
+\section{Código del Punto 5} 
+
+\subsection{Cálculo de la producción acumulada en un determinado año}
+
+A partir del siguiente código se calcula producción acumulada en un determinado año, considerando a t como las fechas de inicio y fin del año. 
+
+\begin{lstlisting}[language=Python,frame=single,caption=Producción acumulada en una determinada temporada ,label={cod:punto5}] 
+  # --- PUNTO 5: CÁLCULO ANUAL (GRUPO 4) ---
+
+t1ene = 1
+t31dic = 365
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2018 en US$: ", np.ceil(acumyear))
+
+t1ene = 366
+t31dic = 730
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2019 en US$: ", np.ceil(acumyear))
+
+t1ene = 731
+t31dic = 1096
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2020 en US$: ", np.ceil(acumyear))
+
+t1ene = 1097
+t31dic = 1461
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2021 en US$: ", np.ceil(acumyear))
+
+t1ene = 1462
+t31dic = 1826
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2022 en US$: ", np.ceil(acumyear))
+
+t1ene = 1827
+t31dic = 2191
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2023 en US$: ", np.ceil(acumyear))
+
+t1ene = 2192
+t31dic = 2557
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2024 en US$: ", np.ceil(acumyear))
+
+t1ene = 2558
+t31dic = 2922
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2025 en US$: ", np.ceil(acumyear))
+
+t1ene = 2923
+t31dic = 3287
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2026 en US$: ", np.ceil(acumyear))
+
+t1ene = 3288
+t31dic = 3652
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2027 en US$: ", np.ceil(acumyear))
+
+t1ene = 3653
+t31dic = 4018
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2028 en US$: ", np.ceil(acumyear))
+
+t1ene = 4019
+t31dic = 4383
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2029 en US$: ", np.ceil(acumyear))
+
+t1ene = 4384
+t31dic = 4748
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2030 en US$: ", np.ceil(acumyear))
+
+t1ene = 4749
+t31dic = 5113
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2031 en US$: ", np.ceil(acumyear))
+
+t1ene = 5114
+t31dic = 5479
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2032 en US$: ", np.ceil(acumyear))
+
+t1ene = 5480
+t31dic = 5844
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2033 en US$: ", np.ceil(acumyear))
+
+# Ajustamos el cierre exacto según tcierre del Punto 1
+t1ene = 5845
+t31dic = int(tcierre)
+acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
+print("Producción del 2034 en US$: ", np.ceil(acumyear))
+
+acumyear # No editar esta línea
+
+\end{lstlisting} 
+
+\subsection{Gráfico de barras}
+
+A partir del siguiente código obtenemos el gráfico de barras de las producciones acumuladas desde 2022 hasta el cierre del pozo.
+\begin{lstlisting}[language=Python,frame=single,caption=Gráfico de barras ,label={cod:grafbarras}]
+  # Lista de años y sus valores correspondientes
+  year = [2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034]
+  valores = [7915250, 6710433, 5027581, 3772591, 2827103, 2118610, 1590497, 1190226, 892015, 668470, 500643, 375429, 246399]
+
+  # Gráfico de barras directo
+  plt.bar(year, valores)
+  plt.title('Producción Anual (US$) - 2022 al Cierre')
+  plt.xlabel('Año')
+  plt.ylabel('Valor en US$')
+  plt.xticks(year)
+  plt.show()
+\end{lstlisting}

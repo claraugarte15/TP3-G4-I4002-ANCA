@@ -1,0 +1,63 @@
+%----------------------------------------------------------------------------------------
+% Contenido del Informe - Tabla de Contenidos
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+% Numerar con números romanos comenzando con el siguiente número de página
+%----------------------------------------------------------------------------------------
+
+\thispagestyle{plain}
+\pagenumbering{roman}
+\addtocounter{mypageno}{1}
+\setcounter{page}{\value{mypageno}}
+
+%----------------------------------------------------------------------------------------
+%	ESPECIFICA NOMBRES EN ESPAÑOL PARA TITULOS DE INDICES
+%----------------------------------------------------------------------------------------
+
+\renewcommand{\contentsname}{Contenido} 
+\renewcommand\listfigurename{Lista de Figuras}
+\renewcommand\listtablename{Lista de Tablas}
+\renewcommand{\lstlistlistingname}{Lista de Códigos}
+
+%----------------------------------------------------------------------------------------
+%	INCLUIR LA TABLA DE CONTENIDOS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents 
+
+%----------------------------------------------------------------------------------------
+%	INCLUIR LA LISTA DE FIGURAS
+%----------------------------------------------------------------------------------------
+
+\ifx \IncluirListaFiguras\undefined
+  {}
+\else
+   \listoffigures
+\fi
+
+%----------------------------------------------------------------------------------------
+%	INCLUIR LA LISTA DE TABLAS
+%----------------------------------------------------------------------------------------
+
+\ifx \IncluirListaTablas\undefined
+  {}
+\else
+   \listoftables
+\fi
+
+%----------------------------------------------------------------------------------------
+%	INCLUIR LA LISTA DE CÓDIGOS
+%----------------------------------------------------------------------------------------
+
+\ifx \IncluirListaCodigos\undefined
+  {}
+\else
+   \lstlistoflistings
+\fi
+
+%----------------------------------------------------------------------------------------
+%	GUARDAR ULTIMO NUMERO DE PAGINA
+%----------------------------------------------------------------------------------------
+
+\setcounter{mypageno}{\value{page}}%

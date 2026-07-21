@@ -4,44 +4,48 @@
 
 \chapter{Discusión}
 
-\textbf{Los resultados obtenidos están de acuerdo con los valores esperados} (ver Figura \ref{fig:probabilidades}), siendo más precisos a medida que se aumenta el orden de interpolación, y que reduce el espaciamiento para la integración numérica \citep{QueEsEst}.
+El método de ajuste por mínimos cuadrados permitió obtener una función
+exponencial que representa la tendencia de los datos experimentales mediante
+la minimización de la suma de los cuadrados de los errores entre los valores
+medidos y los valores estimados por el modelo.
 
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.8\textwidth]{imagenes/Probabilidades.png}
-	\caption{Probabilidades calculadas a partir de la función de distribución Gaussiana}
-	\label{fig:probabilidades}
-\end{figure}
+Debido a que el modelo planteado posee la forma
 
-Para comenzar, podemos notar que estamos trabajando a un apartamiento del doble de $\sigma$. Según valores tabulados, la probabilidad de que esto suceda se eleva al 2.275\%, citamos esto para tener una noción general de cuanto deberían valer los valores buscados.
-% El comando \% sirve para mostrar el símbolo de porcentaje (\%)
+\[
+Q(t)=Ae^{Bt},
+\]
 
-En cuanto a la interpolación lineal (\textbf{trapecios compuesta}), podemos notar que a medida que aumenta el salto, el valor de la probabilidad va variando en pequeños números. A mayor sea el salto, mayor será el valor de probabilidad. Esto se debe en gran medida a que al ser una función decreciente con concavidad positiva en gran parte del intervalo a integrar, al hacer una interpolación lineal, la recta se hará siempre por encima de la curva original, lo cual nos da un área a integrar mucho mayor. Como podemos ver, sin importar el valor de \textit{h} que usemos, el valor se mantiene relativamente restringido, logrando una aproximación de 4 cifras significativas respecto a los valores tabulados con un espaciamiento de \textit{h} = 0.1 (ver Tabla \ref{tab:tabladisc}).
+fue necesario realizar una transformación logarítmica para convertir la
+expresión en un modelo lineal:
 
-Por otro lado, tenemos la interpolación cuadrática, donde usamos posteriormente, la \textbf{regla de Simpson compuesta}. Este método resulta más preciso que Trapecios, y permite lograr una aproximación significativa hasta la cuarta cifra (milésima del valor porcentual) con un espaciamiento de \textit{h} = 10 (ver Tabla \ref{tab:tabladisc}).
+\[
+\ln(Q)=\ln(A)+Bt.
+\]
 
-\begin{table}[ht]
-	\centering
-	\begin{tabular}{|c|c|c|}
-		\hline
-		\multirow{2}{*}{\textbf{Salto (\textit{h})}} &  \multicolumn{2}{|c|}{\textbf{Probabilidad}} \\
-		\cline{2-3}
-		& \textbf{Según trapecios (\%)} & \textbf{Según Simpson (\%)} \\
-		\hline
-		0.01 & 2.2750132 & 2.2750132 \\
-		\hline
-		0.1 & 2.2750168 & 2.2750132 \\
-		\hline
-		10 & 2.3109830 & 2.2751134 \\
-		\hline
-		25 & 2.4989865 & 2.2798936 \\
-		\hline
-	\end{tabular}
-	\caption{Tabla comparativa de los resultados para ambos métodos}
-	\label{tab:tabladisc}
-\end{table}
-% \multirow{filas}{ancho}{contenido} escribe el texto indicado en {contenido} juntando la combinando verticalmente la cantidad de celdas indicadas en {filas}. El tamaño de la celda combinada se indica en {ancho}. Si se coloca * en {ancho}, el ancho se adapta a lo necesario.
-% \multicolumn{columnas}{alineación}{contenido} escribe el texto indicado en {contenido} juntando la combinando horizontalmente la cantidad de celdas indicadas en {columnas}. La alineación será c (centrado), l (izquierda) o r (derecha), y se le podrán incluir las | si se desean agregar los bordes verticales.
-% cline{inicio-fin} es similar a hline, pero indicando en qué columna empieza y en cuál termina esa línea. Evita un efecto de tachado en una celda combinada verticalmente
+Esta transformación permitió aplicar el método de mínimos cuadrados lineales
+para determinar los coeficientes del modelo. Una vez obtenidos dichos
+coeficientes, se recuperó el valor de \(A\) aplicando la función exponencial.
 
-En conclusión, podemos afirmar que el método de Simpson es más preciso que el de Trapecios para un mismo espaciamiento \textit{h}. Además, debido a su mayor orden, Simpson no requiere de espaciamientos demasiado pequeños para lograr una aproximación tolerable.
+El criterio utilizado por el método consiste en minimizar la suma de los
+cuadrados de las diferencias entre los valores observados y los valores
+estimados. Al elevar los errores al cuadrado se evita que los errores
+positivos y negativos se compensen entre sí y, además, se otorga un mayor
+peso a aquellas observaciones que presentan desviaciones más importantes.
+
+La calidad del ajuste puede evaluarse mediante el error cuadrático medio
+(ECM), el cual proporciona una medida global de la diferencia entre los datos
+experimentales y la función obtenida. Un valor reducido del ECM indica que el
+modelo reproduce adecuadamente la tendencia observada en los datos.
+
+En este trabajo, el ajuste exponencial permitió representar el comportamiento
+general de la producción del pozo y obtener una función continua a partir de
+un conjunto discreto de mediciones. Esto hizo posible realizar estimaciones
+para tiempos distintos de los observados experimentalmente y calcular tanto
+la fecha estimada de cierre como la producción acumulada y el valor económico
+remanente.
+
+Por lo tanto, el método de mínimos cuadrados constituye una herramienta de
+gran utilidad para el ajuste de datos experimentales, ya que permite obtener
+una función matemática que aproxima el comportamiento real del fenómeno
+estudiado y facilita la realización de análisis y predicciones posteriores.
+\

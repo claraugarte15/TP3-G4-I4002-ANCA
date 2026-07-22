@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {2.9.2}Punto 1: Fecha estimada de cierre}{13}{subsection.2.9.2}%
 \contentsline {subsection}{\numberline {2.9.3}Punto 2: Producción acumulada}{13}{subsection.2.9.3}%
 \contentsline {subsection}{\numberline {2.9.4}Punto 3: Producción acumulada del 50\%}{14}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Punto 4: Valor económico de la producción remanente}{14}{subsection.2.9.5}%
+\contentsline {subsection}{\numberline {2.9.5}Punto 4: Valor económico de la producción remanente}{15}{subsection.2.9.5}%
 \contentsline {subsection}{\numberline {2.9.6}Punto 5: Producción anual}{15}{subsection.2.9.6}%
-\contentsline {chapter}{\numberline {3}Discusión}{16}{chapter.3}%
-\contentsline {chapter}{\numberline {A}Apéndices}{17}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}Notebooks de Colab}{17}{section.Alph1.1}%
-\contentsline {chapter}{Bibliografía}{18}{appendix*.9}%
+\contentsline {chapter}{\numberline {3}Discusión}{17}{chapter.3}%
+\contentsline {chapter}{\numberline {A}Apéndices}{19}{appendix.Alph1}%
+\contentsline {section}{\numberline {A.1}Notebooks de Colab}{19}{section.Alph1.1}%
+\contentsline {chapter}{Bibliografía}{20}{appendix*.8}%

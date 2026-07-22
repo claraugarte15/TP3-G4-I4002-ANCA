@@ -69,7 +69,12 @@ La Figura \ref{fig:torta} muestra la distribución porcentual entre la producci�
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.55\textwidth]{imagenes/produccion_acumulada.png}
+% If the image file is missing, show a framed placeholder instead of failing
+\IfFileExists{imagenes/produccion_acumulada.png}{%
+    \includegraphics[width=0.55\textwidth]{imagenes/produccion_acumulada.png}%
+}{%
+    \fbox{\parbox[b][0.28\textheight][c]{0.55\textwidth}{\centering Imagen ``produccion_acumulada.png'' no disponible.}}%
+}
 \caption{Distribución de la producción acumulada.}
 \label{fig:torta}
 \end{figure}

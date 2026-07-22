@@ -20,7 +20,30 @@ donde:
     \item $B=-0.000684635$
     \item Error Cuadrático Medio (ECM): $76.807906$
 \end{itemize}
+\begin{table}[ht]
+\centering
+\caption{Resultados del ajuste exponencial}
+\label{tab:ajuste_exponencial}
 
+\begin{tabular}{ccccc}
+\toprule
+$x_i$ (datos) & $y_i$ (datos) & $f(x_i)$ (ajustes) & $|y_i-f(x_i)|$ & Error$^2$ \\
+\midrule
+1    & 289 & 274.385731 & 14.614269 & 213.576864 \\
+182  & 257 & 242.406491 & 14.593509 & 212.970512 \\
+366  & 213 & 213.714981 & 0.714981  & 0.511198 \\
+547  & 182 & 188.806825 & 6.806825  & 46.332867 \\
+731  & 155 & 166.459433 & 11.459433 & 131.318615 \\
+913  & 137 & 146.958192 & 9.958192  & 99.165593 \\
+1097 & 126 & 129.564053 & 3.564053  & 12.702471 \\
+1278 & 115 & 114.463559 & 0.536441  & 0.287769 \\
+1462 & 103 & 100.915521 & 2.084479  & 4.345051 \\
+1643 & 96  & 89.153971  & 6.846029  & 46.868116 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+En la Tabla \ref{tab:ajuste_exponencial} se presentan los resultados obtenidos para cada uno de los datos experimentales.
 En la Figura \ref{fig:ajuste} puede observarse el ajuste obtenido entre los datos experimentales y la curva exponencial.
 
 \begin{figure}[H]
@@ -69,12 +92,6 @@ La Figura \ref{fig:torta} muestra la distribución porcentual entre la producci�
 
 \begin{figure}[H]
 \centering
-% If the image file is missing, show a framed placeholder instead of failing
-\IfFileExists{imagenes/produccion_acumulada.png}{%
-    \includegraphics[width=0.55\textwidth]{imagenes/produccion_acumulada.png}%
-}{%
-    \fbox{\parbox[b][0.28\textheight][c]{0.55\textwidth}{\centering Imagen ``produccion_acumulada.png'' no disponible.}}%
-}
 \includegraphics[width=0.55\textwidth]{imagenes/producción_acumulada.png}
 \caption{Distribución de la producción acumulada.}
 \label{fig:torta}

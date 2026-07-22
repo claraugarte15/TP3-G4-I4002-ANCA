@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.8)  22 JUL 2026 01:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.5.8)  22 JUL 2026 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -994,7 +994,7 @@ Package biblatex Info: Reference segment=0 on input line 212.
 \openout2 = `tapa.aux'.
 
  (tapa.tex
-<imagenes/Logos-UTN-BA.png, id=135, 225.84375pt x 127.22531pt>
+<imagenes/Logos-UTN-BA.png, id=131, 225.84375pt x 127.22531pt>
 File: imagenes/Logos-UTN-BA.png Graphic file (type png)
 <use imagenes/Logos-UTN-BA.png>
 Package pdftex.def Info: imagenes/Logos-UTN-BA.png  used on input line 88.
@@ -1042,16 +1042,16 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
-
-
-
-
-])
+))
 \tf@toc=\write5
 \openout5 = `"Proyecto Ejemplo - Versión Grupal.toc"'.
 
- [3] (Proyecto Ejemplo - Versión Grupal.lof
+ [2
+
+
+
+
+] (Proyecto Ejemplo - Versión Grupal.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1059,7 +1059,7 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write6
 \openout6 = `"Proyecto Ejemplo - Versión Grupal.lof"'.
 
- [4
+ [3
 
 ] (Proyecto Ejemplo - Versión Grupal.lot
 LaTeX Info: Redefining \sptext on input line 1.
@@ -1069,13 +1069,13 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write7
 \openout7 = `"Proyecto Ejemplo - Versión Grupal.lot"'.
 
- [5
+ [4
 
 ] (Proyecto Ejemplo - Versión Grupal.lol)
 \tf@lol=\write8
 \openout8 = `"Proyecto Ejemplo - Versión Grupal.lol"'.
 
-) [6
+) [5
 
 ]
 \openout2 = `intro.aux'.
@@ -1097,33 +1097,16 @@ l.24         \item \textit
 
  (implement.tex
 Cap\'{\i }tulo 2.
-
-implement.tex:13: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.13 \\b
-        egin{table}[h]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-implement.tex:15: Package caption Error: \caption outside float.
-
-See the caption package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.15     \caption
-                 {Valores de producción para M = 4}
-If you do not understand this error, please take a closer look
-at the documentation of the `caption' package, especially the
-section about errors.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+Runaway argument?
+{table}[Ht]\caption@settype {table}\caption@setanchor \caption@xfloat@hook \ETC.
+implement.tex:17: Paragraph ended before \@float@HH was complete.
+<to be read again> 
+                   \par 
+l.17 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
 
 implement.tex:34: Extra }, or forgotten \endgroup.
 \@endfloatbox ...pagefalse \outer@nobreak \egroup 
@@ -1136,13 +1119,16 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-implement.tex:34: Too many }'s.
+implement.tex:34: Extra }, or forgotten \endgroup.
 \color@endbox ->\color@endgroup \egroup 
                                         
 l.34 \end{table}
                 
-You've closed more groups than you opened.
-Such booboos are generally harmless, so keep going.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
 
 implement.tex:34: LaTeX Error: \begin{document} ended by \end{table}.
@@ -1156,13 +1142,6 @@ l.34 \end{table}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
-
-implement.tex:34: Extra \endgroup.
-\end  ...end#1\endcsname \@checkend {#1}\endgroup 
-                                                  \UseHook {env/#1/after}\if...
-l.34 \end{table}
-                
-Things are pretty mixed up, but I think the worst is over.
 
 (C:\Users\Usuario\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
@@ -1193,59 +1172,43 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \openout2 = `resultados.aux'.
 
  (resultados.tex
-<imagenes/ajuste_exponencial.png, id=562, 398.9304pt x 314.3745pt>
+<imagenes/ajuste_exponencial.png, id=556, 398.9304pt x 314.3745pt>
 File: imagenes/ajuste_exponencial.png Graphic file (type png)
 <use imagenes/ajuste_exponencial.png>
-Package pdftex.def Info: imagenes/ajuste_exponencial.png  used on input line 28.
+Package pdftex.def Info: imagenes/ajuste_exponencial.png  used on input line 51.
 (pdftex.def)             Requested size: 373.3035pt x 294.19289pt.
  [12
 
 
 
-{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc} <./imagenes/ajuste_exponencial.png>]
-resultados.tex:78: Missing $ inserted.
-<inserted text> 
-                $
-l.78 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-resultados.tex:78: Missing $ inserted.
-<inserted text> 
-                $
-l.78 }
-      
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-<imagenes/producción_acumulada.png, id=571, 281.1303pt x 297.0297pt>
+{C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}] [13 <./imagenes/ajuste_exponencial.png>]
+<imagenes/producción_acumulada.png, id=569, 281.1303pt x 297.0297pt>
 File: imagenes/producción_acumulada.png Graphic file (type png)
 <use imagenes/producción_acumulada.png>
-Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 80.
+Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 95.
 (pdftex.def)             Requested size: 250.38564pt x 264.55048pt.
-[13] [14 <./imagenes/producción_acumulada.png>]
-<imagenes/produccion_anual.png, id=583, 400.3758pt x 328.8285pt>
+ [14 <./imagenes/producción_acumulada.png>]
+<imagenes/produccion_anual.png, id=577, 400.3758pt x 328.8285pt>
 File: imagenes/produccion_anual.png Graphic file (type png)
 <use imagenes/produccion_anual.png>
-Package pdftex.def Info: imagenes/produccion_anual.png  used on input line 121.
+Package pdftex.def Info: imagenes/produccion_anual.png  used on input line 135.
 (pdftex.def)             Requested size: 455.24411pt x 373.92007pt.
-) [15 <./imagenes/produccion_anual.png>] [16]
+) [15 <./imagenes/produccion_anual.png>]
 \openout2 = `discusion.aux'.
 
  (discusion.tex
 Cap\'{\i }tulo 3.
-) [17
+) [16
 
 
 
 
-] [18]
+] [17]
 \openout2 = `apendice_A.aux'.
 
  (apendice_A.tex
 Ap\'{e}ndice A.
-) [19
+) [18
 
 
 
@@ -1257,15 +1220,9 @@ l.284 \endgroup
 Things are pretty mixed up, but I think the worst is over.
 
 
-Overfull \hbox (100.82399pt too wide) in paragraph at lines 288--288
-\T1/lmr/m/n/12 ju-lio de 2024, des-de []$https : / / youtube . com / playlist ? list = PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW &
- []
+LaTeX Warning: Empty bibliography on input line 288.
 
-[20
-
-
-
-] (Proyecto Ejemplo - Versión Grupal.aux (tapa.aux)
+(Proyecto Ejemplo - Versión Grupal.aux (tapa.aux)
 LaTeX Info: Redefining \sptext on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
@@ -1279,7 +1236,7 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `"Proyecto Ejemplo - Versión Grupal".out' has not changed.
-(rerunfilecheck)             Checksum: 8C8053A2DC9D378C326FFD9B526EACE4;7474.
+(rerunfilecheck)             Checksum: 20AB8E4C5DE4C43B77B258A84F0A165E;7365.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                "Proyecto Ejemplo - Versión Grupal"
@@ -1290,17 +1247,17 @@ Package logreq Info: Writing requests to '"Proyecto Ejemplo - Versión Grupal".r
 
  ) 
 Here is how much of TeX's memory you used:
- 31713 strings out of 467871
- 617627 string characters out of 5417409
- 2091016 words of memory out of 5000000
- 59841 multiletter control sequences out of 15000+600000
+ 31449 strings out of 467871
+ 611883 string characters out of 5417409
+ 2090885 words of memory out of 5000000
+ 59584 multiletter control sequences out of 15000+600000
  708324 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,8n,79p,1222b,4990s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 69i,9n,79p,1222b,4990s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmcsc10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (26 pages, 441836 bytes).
+Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (23 pages, 429319 bytes).
 PDF statistics:
- 753 PDF objects out of 1000 (max. 8388607)
- 303 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 725 PDF objects out of 1000 (max. 8388607)
+ 296 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 

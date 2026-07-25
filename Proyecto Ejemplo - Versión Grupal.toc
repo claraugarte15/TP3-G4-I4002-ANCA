@@ -4,7 +4,6 @@
 \contentsline {section}{\numberline {1.2}Métodos Comunes de Ajuste de Curvas}{1}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Tipos de Ajustes de Curva}{2}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Importancia y Aplicaciones del Modelo Exponencial}{2}{subsection.1.2.2}%
-\contentsline {subsubsection}{Ejemplo de Aplicación}{2}{subsection.1.2.2}%
 \contentsline {chapter}{\numberline {2}Implementación}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Paquetes Utilizados}{4}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Código del cálculo de t para una determinada fecha}{5}{section.2.2}%

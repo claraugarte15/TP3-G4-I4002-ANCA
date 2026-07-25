@@ -152,6 +152,40 @@
       \field{year}{2024}
       \true{nocite}
     \endentry
+    \entry{openstax2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e8a621c553c482f8dc87478c3aabff42}{%
+           family={{OpenStax - Rice University}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{fullhash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{fullhashraw}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{bibnamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorbibnamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authornamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorfullhash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorfullhashraw}{e8a621c553c482f8dc87478c3aabff42}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus Volume 1: Exponential Growth and Decay}
+      \field{urlday}{25}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openstax.org/books/calculus-volume-1/pages/6-8-exponential-growth-and-decay
+      \endverb
+      \verb{url}
+      \verb https://openstax.org/books/calculus-volume-1/pages/6-8-exponential-growth-and-decay
+      \endverb
+    \endentry
   \enddatalist
   \datalist[entry]{nty/global//global/global/global}
     \entry{Canal}{misc}{}{}
@@ -286,6 +320,40 @@
       \field{title}{Ajuste de Curvas}
       \field{year}{2024}
       \true{nocite}
+    \endentry
+    \entry{openstax2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e8a621c553c482f8dc87478c3aabff42}{%
+           family={{OpenStax - Rice University}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{fullhash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{fullhashraw}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{bibnamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorbibnamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authornamehash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorfullhash}{e8a621c553c482f8dc87478c3aabff42}
+      \strng{authorfullhashraw}{e8a621c553c482f8dc87478c3aabff42}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Calculus Volume 1: Exponential Growth and Decay}
+      \field{urlday}{25}
+      \field{urlmonth}{7}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://openstax.org/books/calculus-volume-1/pages/6-8-exponential-growth-and-decay
+      \endverb
+      \verb{url}
+      \verb https://openstax.org/books/calculus-volume-1/pages/6-8-exponential-growth-and-decay
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

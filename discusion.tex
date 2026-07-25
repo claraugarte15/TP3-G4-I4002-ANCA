@@ -2,51 +2,36 @@
 % Contenido del Informe - Discusión
 %----------------------------------------------------------------------------------------
 
-\chapter*{Discusión}
-\addcontentsline{toc}{chapter}{Discusión}
+\chapter{Discusión}
 
-El método de ajuste por mínimos cuadrados permitió obtener una función
-exponencial que representa la tendencia de los datos experimentales mediante
-la minimización de la suma de los cuadrados de los errores entre los valores
-medidos y los valores estimados por el modelo.
+El método de ajuste por mínimos cuadrados permitió modelar el comportamiento exponencial del caudal del pozo petrolero mediante una transformación logarítmica previa, la cual convirtió la expresión analítica $Q(t)=Ae^{Bt}$ en el modelo lineal $\ln(Q)=\ln(A)+Bt$. Esta metodología minimiza la suma de los cuadrados de los errores, evitando la compensación entre desvíos positivos y negativos, y penalizando en mayor medida las desviaciones más grandes respecto a la tendencia general.
 
-Debido a que el modelo planteado posee la forma
+Para evaluar la efectividad y precisión del algoritmo implementado en Python, se realizó una validación cruzada comparando los parámetros obtenidos con las herramientas de estimación comercial de Microsoft Excel. El ajuste se realizó con \texttt{np.polyfit}. Los resultados numéricos se resumen en la siguiente tabla:
 
-\[
-Q(t)=Ae^{Bt},
-\]
+\begin{table}[h!]
+\centering
+\caption{Comparación de parámetros de ajuste: Python vs. Excel}
+\label{tab:comparacion_modelos}
+\resizebox{\textwidth}{!}{% Forzar a la tabla a ajustarse al ancho del texto
+\begin{tabular}{lccc}
+\hline
+\textbf{Parámetro} & \textbf{Python (Colab)} & \textbf{Excel (Gráfico)} & \textbf{Diferencia} \\ \hline
+\textbf{Coeficiente A} (Intersección) & $274,573649$ & $274,573649$ & $0,000000$ \\
+\textbf{Coeficiente B} (Declino)      & $-0,000684635$ & $-0,000685$ & Redondeo visual ($10^{-6}$) \\
+\textbf{Error Cuadrático Medio}        & $76,807906$ & -- & -- \\ \hline
+\end{tabular}%
+}
+\end{table}
 
-fue necesario realizar una transformación logarítmica para convertir la
-expresión en un modelo lineal:
+Como se observa en la Tabla \ref{tab:comparacion_modelos}, existe una coincidencia analítica exacta entre ambas plataformas. La sutil discrepancia en el coeficiente $B$ responde únicamente a una restricción de visualización en la etiqueta del gráfico de Excel (que redondea el valor a seis decimales), confirmando que ambos sistemas resuelven algebraicamente el mismo conjunto de ecuaciones normales.
 
-\[
-\ln(Q)=\ln(A)+Bt.
-\]
+A pesar de que Excel ofrece una resolución visual inmediata, la implementación en Python proporciona ventajas metodológicas críticas para el análisis de ingeniería:
+\begin{itemize}
+\item \textbf{Precisión extendida:} Python conserva el valor exacto de las constantes sin truncamientos visuales, asegurando predicciones más rigurosas a largo plazo.
+\item \textbf{Automatización del error:} Permite calcular de forma directa métricas de calidad del ajuste como el Error Cuadrático Medio (ECM).
+\item \textbf{Flexibilidad predictiva:} Facilita el procesamiento posterior de la función continua obtenida.
+\end{itemize}
 
-Esta transformación permitió aplicar el método de mínimos cuadrados lineales
-para determinar los coeficientes del modelo. Una vez obtenidos dichos
-coeficientes, se recuperó el valor de \(A\) aplicando la función exponencial.
+El valor reducido del ECM ($76,807906$) ratifica la alta calidad y confiabilidad del ajuste para describir el declino natural del yacimiento. La certeza sobre la precisión de los coeficientes $A$ y $B$ validó el uso del modelo exponencial continuo para realizar proyecciones complejas a partir de mediciones discretas. Esto hizo posible calcular con exactitud la fecha límite de operación (28 de noviembre de 2034), la distribución del volumen acumulado remanente ($31,49\%$) y su correspondiente valor económico, valuado en más de 48 millones de dólares.
 
-El criterio utilizado por el método consiste en minimizar la suma de los
-cuadrados de las diferencias entre los valores observados y los valores
-estimados. Al elevar los errores al cuadrado se evita que los errores
-positivos y negativos se compensen entre sí y, además, se otorga un mayor
-peso a aquellas observaciones que presentan desviaciones más importantes.
-
-La calidad del ajuste puede evaluarse mediante el error cuadrático medio
-(ECM), el cual proporciona una medida global de la diferencia entre los datos
-experimentales y la función obtenida. Un valor reducido del ECM indica que el
-modelo reproduce adecuadamente la tendencia observada en los datos.
-
-En este trabajo, el ajuste exponencial permitió representar el comportamiento
-general de la producción del pozo y obtener una función continua a partir de
-un conjunto discreto de mediciones. Esto hizo posible realizar estimaciones
-para tiempos distintos de los observados experimentalmente y calcular tanto
-la fecha estimada de cierre como la producción acumulada y el valor económico
-remanente.
-
-Por lo tanto, el método de mínimos cuadrados constituye una herramienta de
-gran utilidad para el ajuste de datos experimentales, ya que permite obtener
-una función matemática que aproxima el comportamiento real del fenómeno
-estudiado y facilita la realización de análisis y predicciones posteriores.
-\
+En conclusión, el ajuste por mínimos cuadrados mediante programación en Python se consolida como una herramienta de máxima efectividad. Supera las limitaciones de las planillas de cálculo tradicionales al permitir la integración directa de los modelos matemáticos con algoritmos de optimización económica y planificación de producción.

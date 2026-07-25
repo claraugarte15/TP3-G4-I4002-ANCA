@@ -1,9 +1,11 @@
 %----------------------------------------------------------------------------------------
 % Contenido del Informe - Resultados
 %----------------------------------------------------------------------------------------
-\section{Resultados}
+\chapter{Resultados}
 
 A continuación, se presentan los resultados obtenidos a partir de la implementación del ajuste exponencial por mínimos cuadrados y de los cálculos solicitados en cada uno de los puntos del trabajo práctico. 
+
+\section{Análisis del ajuste exponencial}
 
 \subsection{Ajuste exponencial de los datos}
 
@@ -44,7 +46,7 @@ $x_i$ (datos) & $y_i$ (datos) & $f(x_i)$ (ajustes) & $|y_i-f(x_i)|$ & Error$^2$ 
 \end{table}
 
 En la Tabla \ref{tab:ajuste_exponencial} se presentan los resultados obtenidos para cada uno de los datos experimentales.
-En la Figura \ref{fig:ajuste} puede observarse el ajuste obtenido entre los datos experimentales y la curva exponencial.
+En la Figura \ref{fig:ajuste} puede observarse el ajuste obtenido entre los datos experimentales y la curva exponencial realizado en python.
 
 \begin{figure}[H]
 \centering
@@ -53,7 +55,17 @@ En la Figura \ref{fig:ajuste} puede observarse el ajuste obtenido entre los dato
 \label{fig:ajuste}
 \end{figure}
 
-\subsection{Punto 1: Fecha estimada de cierre}
+Y en la siguiente figura se muestra la gráfica en Excel de los coeficientes A y B.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.8\textwidth]{imagenes/excel.png}
+	\caption{Coeficientes obtenido en Excel}
+	\label{fig:excel}
+\end{figure}    
+
+\newpage
+
+\section{Punto 1: Fecha estimada de cierre}
 
 Utilizando el modelo obtenido se determinó el instante en el cual la producción diaria alcanza el valor de cierre establecido.
 
@@ -69,7 +81,7 @@ Tomando como fecha inicial el 1 de enero de 2018, la fecha estimada de cierre co
 \boxed{\text{28 de noviembre de 2034}}
 \]
 
-\subsection{Punto 2: Producción acumulada}
+\section{Punto 2: Producción acumulada}
 
 A partir de la integración del modelo exponencial se calcularon los volúmenes de producción acumulada.
 
@@ -97,7 +109,7 @@ La Figura \ref{fig:torta} muestra la distribución porcentual entre la producci�
 \label{fig:torta}
 \end{figure}
 
-\subsection{Punto 3: Producción acumulada del 50\%}
+\section{Punto 3: Producción acumulada del 50\%}
 
 Se determinó el instante en el cual la producción acumulada alcanza el 50\% de la producción total estimada.
 
@@ -109,7 +121,7 @@ Los resultados obtenidos fueron:
     \item Fecha: \textbf{18 de septiembre de 2020}
 \end{itemize}
 
-\subsection{Punto 4: Valor económico de la producción remanente}
+\section{Punto 4: Valor económico de la producción remanente}
 
 El notebook calcula el valor económico de la producción remanente considerando:
 
@@ -124,7 +136,7 @@ Con estos datos se obtuvo un valor económico de la producción remanente de:
 \]
 
 Este valor corresponde a la producción remanente estimada entre el 2 de julio de 2022 y la fecha de cierre del pozo.
-\subsection{Punto 5: Producción anual}
+\section{Punto 5: Producción anual}
 
 Finalmente, se calculó el valor económico anual de la producción desde el año 2022 hasta el cierre del yacimiento.
 

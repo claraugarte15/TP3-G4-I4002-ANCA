@@ -22,13 +22,15 @@
 \contentsline {section}{\numberline {2.8}Código del Punto 5}{9}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Cálculo de la producción acumulada en un determinado año}{9}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Gráfico de barras}{11}{subsection.2.8.2}%
-\contentsline {section}{\numberline {2.9}Resultados}{12}{section.2.9}%
-\contentsline {subsection}{\numberline {2.9.1}Ajuste exponencial de los datos}{12}{subsection.2.9.1}%
-\contentsline {subsection}{\numberline {2.9.2}Punto 1: Fecha estimada de cierre}{13}{subsection.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}Punto 2: Producción acumulada}{13}{subsection.2.9.3}%
-\contentsline {subsection}{\numberline {2.9.4}Punto 3: Producción acumulada del 50\%}{14}{subsection.2.9.4}%
-\contentsline {subsection}{\numberline {2.9.5}Punto 4: Valor económico de la producción remanente}{14}{subsection.2.9.5}%
-\contentsline {subsection}{\numberline {2.9.6}Punto 5: Producción anual}{15}{subsection.2.9.6}%
-\contentsline {chapter}{Discusión}{16}{chapter*.9}%
-\contentsline {chapter}{Apéndices}{17}{appendix*.10}%
-\contentsline {section}{\numberline {.1}Notebooks de Colab}{17}{section.Alph0.1}%
+\contentsline {chapter}{\numberline {3}Resultados}{12}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Análisis del ajuste exponencial}{12}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Ajuste exponencial de los datos}{12}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}Punto 1: Fecha estimada de cierre}{14}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Punto 2: Producción acumulada}{14}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Punto 3: Producción acumulada del 50\%}{15}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Punto 4: Valor económico de la producción remanente}{15}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Punto 5: Producción anual}{16}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Discusión}{17}{chapter.4}%
+\contentsline {chapter}{Apéndices}{19}{appendix*.12}%
+\contentsline {section}{\numberline {.1}Notebooks de Colab}{19}{section.Alph0.1}%
+\contentsline {chapter}{Bibliografía}{20}{appendix*.13}%

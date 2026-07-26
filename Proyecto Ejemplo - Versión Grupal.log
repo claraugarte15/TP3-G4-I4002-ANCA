@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  25 JUL 2026 00:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  25 JUL 2026 23:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1123,18 +1123,18 @@ Cap\'{\i }tulo 3.
 
 
 {/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<imagenes/ajuste_exponencial.png, id=593, 398.9304pt x 314.3745pt>
+<imagenes/ajuste_exponencial.png, id=591, 398.9304pt x 314.3745pt>
 File: imagenes/ajuste_exponencial.png Graphic file (type png)
 <use imagenes/ajuste_exponencial.png>
 Package pdftex.def Info: imagenes/ajuste_exponencial.png  used on input line 53.
 (pdftex.def)             Requested size: 373.3035pt x 294.19289pt.
-<imagenes/excel.png, id=594, 685.56125pt x 386.44376pt>
+<imagenes/excel.png, id=592, 685.56125pt x 386.44376pt>
 File: imagenes/excel.png Graphic file (type png)
 <use imagenes/excel.png>
 Package pdftex.def Info: imagenes/excel.png  used on input line 61.
 (pdftex.def)             Requested size: 364.19667pt x 205.29773pt.
  [13 <./imagenes/ajuste_exponencial.png> <./imagenes/excel.png>]
-<imagenes/producción_acumulada.png, id=604, 281.1303pt x 297.0297pt>
+<imagenes/producción_acumulada.png, id=602, 281.1303pt x 297.0297pt>
 File: imagenes/producción_acumulada.png Graphic file (type png)
 <use imagenes/producción_acumulada.png>
 Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 107.
@@ -1143,7 +1143,7 @@ Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 112.
  [15 <./imagenes/producción_acumulada.png>]
-<imagenes/produccion_anual.png, id=615, 400.3758pt x 328.8285pt>
+<imagenes/produccion_anual.png, id=613, 400.3758pt x 328.8285pt>
 File: imagenes/produccion_anual.png Graphic file (type png)
 <use imagenes/produccion_anual.png>
 Package pdftex.def Info: imagenes/produccion_anual.png  used on input line 147.
@@ -1184,34 +1184,25 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `"Proyecto Ejemplo - Versión Grupal".out' has not changed.
 (rerunfilecheck)             Checksum: 756790D1F0CCDAD94BE3D9536572FCCD;7647.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                "Proyecto Ejemplo - Versión Grupal"
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to '"Proyecto Ejemplo - Versión Grupal".run.xml'.
 \openout1 = `"Proyecto Ejemplo - Versión Grupal.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31589 strings out of 467525
- 606785 string characters out of 5418983
- 2089590 words of memory out of 5000000
- 59750 multiletter control sequences out of 15000+600000
+ 31578 strings out of 467525
+ 606499 string characters out of 5418983
+ 2089479 words of memory out of 5000000
+ 59740 multiletter control sequences out of 15000+600000
  712356 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,11n,79p,1210b,4990s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (26 pages, 421718 bytes).
+Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (26 pages, 421039 bytes).
 PDF statistics:
- 792 PDF objects out of 1000 (max. 8388607)
- 717 compressed objects within 8 object streams
- 308 named destinations out of 1000 (max. 500000)
+ 788 PDF objects out of 1000 (max. 8388607)
+ 713 compressed objects within 8 object streams
+ 307 named destinations out of 1000 (max. 500000)
  298 words of extra memory for PDF output out of 10000 (max. 10000000)
 

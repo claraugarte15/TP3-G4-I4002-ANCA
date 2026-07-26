@@ -65,33 +65,32 @@ El ajuste exponencial resulta especialmente útil cuando los datos muestran un c
 
 
 
-\subsection*{Ejemplo de Aplicación}
+\subsubsection{Ejemplo de Aplicación}
 
-Supongamos que estamos estudiando el fenómeno físico de la desintegración radiactiva de un isótopo inestable en un laboratorio \cite{openstax2022}. La cantidad de material radiactivo remanente se mide en diferentes instantes de tiempo, y se observa que la velocidad de desintegración es directamente proporcional a la cantidad de núcleos activos presentes, lo que matemáticamente se traduce en un modelo exponencial decreciente de la forma $y = Ae^{Bx}$ (donde $B < 0$). 
-
-Para determinar los parámetros del modelo, se realiza el siguiente procedimiento metodológico::
+Supongamos que estamos estudiando el crecimiento bacteriano en un laboratorio. La cantidad de bacterias se mide en diferentes momentos, y se espera que el crecimiento siga un modelo exponencial debido a la naturaleza de la reproducción bacteriana. Queremos ajustar un modelo exponencial de la forma \( y = Ae^{Bx} \) a los datos observados.\\
+Para ello tenemos que realizar el siguiente procedimiento:
 
 \begin{enumerate}
-    \item \textbf{Recolección de Datos:} Se registran experimentalmente los valores de la masa o actividad del isótopo ($y$) en función del tiempo transcurrido ($x$).
-    
-    \item \textbf{Transformación Logarítmica:} Para linealizar el modelo exponencial y poder aplicar herramientas analíticas lineales, se toma el logaritmo natural en ambos miembros de la ecuación:
-    \[
-    \ln(y) = \ln(Ae^{Bx}) = \ln(A) + Bx
-    \]
-    Definiendo los cambios de variable $Y = \ln(y)$ y $C = \ln(A)$, se obtiene la ecuación de una línea recta:
-    \[
-    Y = Bx + C
-    \]
-    
-    \item \textbf{Ajuste Lineal:} Se aplica el método de los mínimos cuadrados sobre las variables transformadas para calcular analíticamente la pendiente $B$ y la ordenada al origen $C$.
-    
-    \item \textbf{Obtención del Modelo Exponencial:} Una vez hallado el valor de la constante lineal $C$, se recupera el factor de escala original $A$ mediante la función exponencial inversa:
-    \[
-    A = e^C
-    \]
-    
-    \item \textbf{Predicción:} Con el modelo completamente parametrizado, es posible predecir la masa remanente en cualquier tiempo futuro o calcular el tiempo de vida media del elemento.
-\end{enumerate}
+\item \textbf{Recolección de Datos}
+Se registran los datos de la cantidad de bacterias (\( y \)) en diferentes tiempos (\( x \)).
 
+\newpage
+
+\item \textbf{Transformación Logarítmica}\\
+Para simplificar el ajuste, transformamos el modelo exponencial a uno lineal tomando el logaritmo natural de ambos lados de la ecuación \( y = Ae^{Bx} \):
+\[
+\ln(y) = \ln(Ae^{Bx}) = \ln(A) + Bx
+\]
+Definimos \( Y = \ln(y) \) y \( C = \ln(A) \) para obtener la forma lineal \( Y = Bx + C \).
+
+\item \textbf{Ajuste Lineal}\\
+Aplicamos el método de los mínimos cuadrados a la ecuación transformada \( Y = Bx + C \) para determinar los parámetros \( B \) y \( C \).
+
+\item \textbf{Obtención del Modelo Exponencial}\\
+Convertimos \( C \) de nuevo a \( A \) usando \( A = e^C \).
+
+\item \textbf{Predicción}\\
+Utilizamos el modelo ajustado para predecir el comportamiento futuro de la cantidad de bacterias.
+\end{enumerate}
 
 

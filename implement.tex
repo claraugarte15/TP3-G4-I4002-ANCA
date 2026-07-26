@@ -193,14 +193,13 @@ plt.show()
 Con el siguiente código se obtiene la producción acumulada correspondiente al 50\% del total y en cuántos días desde el inicio de la producción se llega a ese volumen.
 
 \begin{lstlisting}[language=Python,frame=single,caption=Producción acumulada y días al 50\% del total ,label={cod:diasvol50}] 
-vol50 = total/2  # Escribir acá cálculo o valor del 50% de la producción acumulada total
+vol50 = total/2  
 print("El valor del 50% del volumen total es:", vol50)
-# Escribir desde acá los cálculos para obtener la cantidad de días que se tarda en alcanzar el 50% del volumen total
-# Guardar resultado final en variable t50
 
-t50 = (np.log(vol50*(B/A) + np.exp(B*1))) / B # No editar esta línea
-print("La cantidad de días  para alcanzar el 50% del volumen total es:", np.ceil(t50))
-t50 # No editar esta línea
+t50 = np.ceil((np.log(vol50*(B/A) + np.exp(B*1))) / B) 
+
+print("La cantidad de días para alcanzar el 50% del volumen total es:", t50)
+t50
 \end{lstlisting}
 
 \subsection{Fecha del 50\% del volumen total}

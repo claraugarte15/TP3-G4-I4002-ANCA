@@ -8,29 +8,30 @@ Los códigos que se indican a continuación fueron escritos en notebooks de Cola
 % \citep{Colab} permite citar a la notebook donde se escribieron los códigos.
 % Ver en referencias.bib el formato con el que debe configurarse la referencia.
 
-En la siguiente tabla se muestra los valores de producción correspondientes al valor $M=7$.
+Para la resolución del trabajo fue necesario determinar el parámetro M, definido como el promedio de los quintos dígitos de los números de legajo de los integrantes del grupo.
+\[
+M=\frac{3+4+4+1}{4}=\frac{12}{4}=3
+\]
+En la siguiente tabla se muestra los valores de producción correspondientes al valor $M=3$.
 
-\begin{table}[ht]
-    \centering
-    \caption{Valores de producción para M = 7}
-    \label{tab:produccion_M7}
-
-    \begin{tabular}{|c|c|}
-        \hline
-        Fecha & Producción $[m^3/d]$ \\
-        \hline
-        Enero 2018 & $289$ \\ \hline
-        Julio 2018 & $257$ \\ \hline
-        Enero 2019 & $213$ \\ \hline
-        Julio 2019 & $182$ \\ \hline
-        Enero 2020 & $155$ \\ \hline
-        Julio 2020 & $137$ \\ \hline
-        Enero 2021 & $126$ \\ \hline
-        Julio 2021 & $115$ \\ \hline
-        Enero 2022 & $103$ \\ \hline
-        Julio 2022 & $96$ \\
-        \hline
-    \end{tabular}
+\begin{table}[h] 
+	\centering 
+	\begin{tabular}{|c|c|c|}
+		\toprule
+		Fecha & Producción $[m^3/d]$  \\
+		\midrule
+		Enero 2018   & $249$ \\ \hline
+		Julio 2018   & $217$ \\ \hline
+		Enero 2019   & $173$ \\ \hline
+		Julio 2019   & $142$ \\ \hline
+		Enero 2020   & $115$ \\ \hline
+		Julio 2020   & $97$ \\ \hline
+		Enero 2021   & $86$ \\ \hline
+		Julio 2021   & $75$  \\ \hline
+		Enero 2022   & $63$  \\ \hline
+		Julio 2022   & $56$  \\
+		\bottomrule
+	\end{tabular}
 \end{table}
 
 \section{Paquetes Utilizados}
@@ -69,12 +70,14 @@ print(fecha , '--> t =' , t)
 Realizamos el ajuste de curva correspondiente con el siguiente código:
 
 \begin{lstlisting}[language=Python,frame=single,caption=Ajuste de curva,label={cod:ajustecurva}] 
-#Promedio de legajos = 7,25 (redondeamos a 7)
+#Promedio de legajos = 3
 
-# Ingresar en la siguiente lista los datos de absicas (x / variable independiente)
+# Ingresar en la siguiente lista los datos de abscisas (x / variable independiente)
 xdata = [1,182,366,547,731,913,1097,1278,1462,1643]
+
 # Ingresar en la siguiente lista los datos de ordenadas (y / variable dependiente)
-ydata = [289,257,213,182, 155, 137, 126, 115, 103, 96]
+ydata = [249,217,173,142,115,97,86,75,63,56]
+
 # Definir valor de variable independiente cuya estimación se desea calcular
 xest = 1705
 

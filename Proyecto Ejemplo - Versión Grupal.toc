@@ -33,4 +33,3 @@
 \contentsline {chapter}{\numberline {4}Discusión}{17}{chapter.4}%
 \contentsline {chapter}{Apéndices}{19}{appendix*.12}%
 \contentsline {section}{\numberline {.1}Notebooks de Colab}{19}{section.Alph0.1}%
-\contentsline {chapter}{Bibliografía}{20}{appendix*.13}%

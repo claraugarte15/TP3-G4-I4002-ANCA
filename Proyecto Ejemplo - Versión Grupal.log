@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  27 JUL 2026 15:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.1)  27 JUL 2026 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -984,7 +984,7 @@ Package biblatex Info: Reference segment=0 on input line 212.
 \openout2 = `tapa.aux'.
 
  (./tapa.tex
-<imagenes/Logos-UTN-BA.png, id=140, 225.84375pt x 127.22531pt>
+<imagenes/Logos-UTN-BA.png, id=136, 225.84375pt x 127.22531pt>
 File: imagenes/Logos-UTN-BA.png Graphic file (type png)
 <use imagenes/Logos-UTN-BA.png>
 Package pdftex.def Info: imagenes/Logos-UTN-BA.png  used on input line 88.
@@ -1032,16 +1032,16 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [2
-
-
-
-
-])
+))
 \tf@toc=\write5
 \openout5 = `"Proyecto Ejemplo - Versión Grupal.toc"'.
 
- [3] (./Proyecto Ejemplo - Versión Grupal.lof
+ [2
+
+
+
+
+] [3] (./Proyecto Ejemplo - Versión Grupal.lof
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1123,18 +1123,18 @@ Cap\'{\i }tulo 3.
 
 
 {/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-<imagenes/ajuste_exponencial.png, id=588, 398.9304pt x 314.3745pt>
+<imagenes/ajuste_exponencial.png, id=582, 398.9304pt x 314.3745pt>
 File: imagenes/ajuste_exponencial.png Graphic file (type png)
 <use imagenes/ajuste_exponencial.png>
 Package pdftex.def Info: imagenes/ajuste_exponencial.png  used on input line 53.
 (pdftex.def)             Requested size: 373.3035pt x 294.19289pt.
-<imagenes/excel.nuevo.png, id=589, 546.04pt x 333.245pt>
+<imagenes/excel.nuevo.png, id=583, 546.04pt x 333.245pt>
 File: imagenes/excel.nuevo.png Graphic file (type png)
 <use imagenes/excel.nuevo.png>
 Package pdftex.def Info: imagenes/excel.nuevo.png  used on input line 61.
 (pdftex.def)             Requested size: 364.19667pt x 222.26616pt.
  [13 <./imagenes/ajuste_exponencial.png> <./imagenes/excel.nuevo.png>]
-<imagenes/producción_acumulada.png, id=599, 301.3659pt x 297.0297pt>
+<imagenes/producción_acumulada.png, id=592, 301.3659pt x 297.0297pt>
 File: imagenes/producción_acumulada.png Graphic file (type png)
 <use imagenes/producción_acumulada.png>
 Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 107.
@@ -1143,7 +1143,7 @@ Package pdftex.def Info: imagenes/producción_acumulada.png  used on input line 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 112.
  [15 <./imagenes/producción_acumulada.png>]
-<imagenes/Produccion_anual.png, id=610, 400.3758pt x 328.8285pt>
+<imagenes/Produccion_anual.png, id=604, 400.3758pt x 328.8285pt>
 File: imagenes/Produccion_anual.png Graphic file (type png)
 <use imagenes/Produccion_anual.png>
 Package pdftex.def Info: imagenes/Produccion_anual.png  used on input line 147.
@@ -1167,15 +1167,10 @@ Cap\'{\i }tulo 4.
 
 
 ]
-Overfull \hbox (100.82399pt too wide) in paragraph at lines 288--288
-\T1/lmr/m/n/12 ju-lio de 2024, des-de []$https : / / youtube . com / playlist ? list = PLGhh6cx23j6wWqhItjcqpmidNOp3OWltW &
- []
 
-[20
+LaTeX Warning: Empty bibliography on input line 288.
 
-
-
-] (./Proyecto Ejemplo - Versión Grupal.aux (./tapa.aux)
+(./Proyecto Ejemplo - Versión Grupal.aux (./tapa.aux)
 LaTeX Info: Redefining \sptext on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
@@ -1184,25 +1179,34 @@ LaTeX Info: Redefining \% on input line 13.
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `"Proyecto Ejemplo - Versión Grupal".out' has not changed.
-(rerunfilecheck)             Checksum: 756790D1F0CCDAD94BE3D9536572FCCD;7647.
+(rerunfilecheck)             Checksum: 575F9425CF95620FE1C6CA0E0C844B2B;7537.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                "Proyecto Ejemplo - Versión Grupal"
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to '"Proyecto Ejemplo - Versión Grupal".run.xml'.
 \openout1 = `"Proyecto Ejemplo - Versión Grupal.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31576 strings out of 467525
- 606499 string characters out of 5418983
- 1968415 words of memory out of 5000000
- 59739 multiletter control sequences out of 15000+600000
+ 31325 strings out of 467525
+ 600985 string characters out of 5418983
+ 1968257 words of memory out of 5000000
+ 59494 multiletter control sequences out of 15000+600000
  712356 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,11n,79p,1210b,4990s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2026/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (26 pages, 411571 bytes).
+Output written on "Proyecto Ejemplo - Versión Grupal.pdf" (25 pages, 404949 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 709 compressed objects within 8 object streams
- 306 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 760 PDF objects out of 1000 (max. 8388607)
+ 687 compressed objects within 7 object streams
+ 300 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 

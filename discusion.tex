@@ -12,13 +12,13 @@ Para evaluar la efectividad y precisión del algoritmo implementado en Python, s
 \centering
 \caption{Comparación de parámetros de ajuste: Python vs. Excel}
 \label{tab:comparacion_modelos}
-\resizebox{\textwidth}{!}{% Forzar a la tabla a ajustarse al ancho del texto
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lccc}
 \hline
 \textbf{Parámetro} & \textbf{Python (Colab)} & \textbf{Excel (Gráfico)} & \textbf{Diferencia} \\ \hline
-\textbf{Coeficiente A} (Intersección) & $274,573649$ & $274,573649$ & $0,000000$ \\
-\textbf{Coeficiente B} (Declino)      & $-0,000684635$ & $-0,000685$ & Redondeo visual ($10^{-6}$) \\
-\textbf{Error Cuadrático Medio}        & $76,807906$ & -- & -- \\ \hline
+\textbf{Coeficiente A} (Intersección) & $241,993925$ & $241,993925$ & $0,000000$ \\
+\textbf{Coeficiente B} (Declino) & $-0,000927335$ & $-0,000927$ & Redondeo visual ($10^{-6}$) \\
+\textbf{Error Cuadrático Medio} & $34,700133$ & -- & -- \\ \hline
 \end{tabular}%
 }
 \end{table}
@@ -32,6 +32,6 @@ A pesar de que Excel ofrece una resolución visual inmediata, la implementación
 \item \textbf{Flexibilidad predictiva:} Facilita el procesamiento posterior de la función continua obtenida.
 \end{itemize}
 
-El valor reducido del ECM ($76,807906$) ratifica la alta calidad y confiabilidad del ajuste para describir el declino natural del yacimiento. La certeza sobre la precisión de los coeficientes $A$ y $B$ validó el uso del modelo exponencial continuo para realizar proyecciones complejas a partir de mediciones discretas. Esto hizo posible calcular con exactitud la fecha límite de operación (28 de noviembre de 2034), la distribución del volumen acumulado remanente ($31,49\%$) y su correspondiente valor económico, valuado en más de 48 millones de dólares.
+El valor reducido del ECM ($34,700133$) ratifica la alta calidad y confiabilidad del ajuste para describir el declino natural del yacimiento. La certeza sobre la precisión de los coeficientes $A$ y $B$ validó el uso del modelo exponencial continuo para realizar proyecciones complejas a partir de mediciones discretas. Esto hizo posible calcular con exactitud la fecha límite de operación (10 de febrero de 2030), la distribución del volumen acumulado remanente ($20,50\%$) y su correspondiente valor económico, valuado en aproximadamente **20,47 millones de dólares estadounidenses**.
 
 En conclusión, el ajuste por mínimos cuadrados mediante programación en Python se consolida como una herramienta de máxima efectividad. Supera las limitaciones de las planillas de cálculo tradicionales al permitir la integración directa de los modelos matemáticos con algoritmos de optimización económica y planificación de producción.

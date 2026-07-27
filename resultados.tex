@@ -12,15 +12,15 @@ A continuación, se presentan los resultados obtenidos a partir de la implementa
 Aplicando el método de mínimos cuadrados sobre los datos experimentales se obtuvo el siguiente modelo exponencial:
 
 \[
-Q(t)=274.573649\,e^{-0.000684635\,t}
+Q(t)=241.9939250424457\,e^{-0.0009273348407815976\,t}
 \]
 
 donde:
 
 \begin{itemize}
-    \item $A=274.573649$
-    \item $B=-0.000684635$
-    \item Error Cuadrático Medio (ECM): $76.807906$
+    \item $A=241.9939250424457$
+    \item $B=-0.0009273348407815976$
+    \item Error Cuadrático Medio (ECM): $34.700133311724116$
 \end{itemize}
 \begin{table}[ht]
 \centering
@@ -29,18 +29,18 @@ donde:
 
 \begin{tabular}{ccccc}
 \toprule
-$x_i$ (datos) & $y_i$ (datos) & $f(x_i)$ (ajustes) & $|y_i-f(x_i)|$ & Error$^2$ \\
+$x_i$ (datos) & $y_i$ (datos) & $f(x_i)$ (ajustes) & Error = |$y_i$ - $f(x_i)$| & $Error^2$ \\
 \midrule
-1    & 289 & 274.385731 & 14.614269 & 213.576864 \\
-182  & 257 & 242.406491 & 14.593509 & 212.970512 \\
-366  & 213 & 213.714981 & 0.714981  & 0.511198 \\
-547  & 182 & 188.806825 & 6.806825  & 46.332867 \\
-731  & 155 & 166.459433 & 11.459433 & 131.318615 \\
-913  & 137 & 146.958192 & 9.958192  & 99.165593 \\
-1097 & 126 & 129.564053 & 3.564053  & 12.702471 \\
-1278 & 115 & 114.463559 & 0.536441  & 0.287769 \\
-1462 & 103 & 100.915521 & 2.084479  & 4.345051 \\
-1643 & 96  & 89.153971  & 6.846029  & 46.868116 \\
+1 & 249 & 241.769620 & 7.230380 & 52.278400 \\
+182 & 217 & 204.412024 & 12.587976 & 158.457144 \\
+366 & 173 & 172.346687 & 0.653313 & 0.426818 \\
+547 & 142 & 145.716137 & 3.716137 & 13.809677 \\
+731 & 115 & 122.858201 & 7.858201 & 61.751325 \\
+913 & 97 & 103.778198 & 6.778198 & 45.943972 \\
+1097 & 86 & 87.498907 & 1.498907 & 2.246722 \\
+1278 & 75 & 73.978810 & 1.021190 & 1.042830 \\
+1462 & 63 & 62.374035 & 0.625965 & 0.391832 \\
+1643 & 56 & 52.736166 & 3.263834 & 10.652613 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -72,13 +72,13 @@ Utilizando el modelo obtenido se determinó el instante en el cual la producció
 Se obtuvo un tiempo de:
 
 \[
-t=6176\ \text{días}
+t=4424.0\ \text{días}
 \]
 
 Tomando como fecha inicial el 1 de enero de 2018, la fecha estimada de cierre corresponde al:
 
 \[
-\boxed{\text{28 de noviembre de 2034}}
+\boxed{\text{10/02/2030}}
 \]
 
 \section{Punto 2: Producción acumulada}
@@ -88,16 +88,16 @@ A partir de la integración del modelo exponencial se calcularon los volúmenes 
 Los resultados obtenidos fueron:
 
 \begin{itemize}
-    \item Producción total estimada: \textbf{394930.73 m$^3$}
-    \item Producción extraída: \textbf{270555.65 m$^3$}
-    \item Producción remanente: \textbf{124375.08 m$^3$}
+    \item Producción total estimada: \textbf{256400.6586267746 m$^3$}
+    \item Producción extraída: \textbf{203845.9523943951 m$^3$}
+    \item Producción remanente: \textbf{52554.70623237943 m$^3$}
 \end{itemize}
 
 Esto representa:
 
 \begin{itemize}
-    \item Producción extraída: \textbf{68.51\%}
-    \item Producción remanente: \textbf{31.49\%}
+    \item Producción extraída: \textbf{79.5\%}
+    \item Producción remanente: \textbf{20.5\%}
 \end{itemize}
 
 La Figura \ref{fig:torta} muestra la distribución porcentual entre la producción extraída y la producción remanente.
@@ -116,8 +116,8 @@ Se determinó el instante en el cual la producción acumulada alcanza el 50\% de
 Los resultados obtenidos fueron:
 
 \begin{itemize}
-    \item Producción acumulada correspondiente al 50\%: \textbf{197465.37 m$^3$}
-    \item Tiempo: \textbf{993 días}
+    \item Producción acumulada correspondiente al 50\%: \textbf{128200.3293133873 m$^3$}
+    \item Tiempo: \textbf{731 días}
     \item Fecha: \textbf{19 de septiembre de 2020}
 \end{itemize}
 
@@ -132,7 +132,7 @@ El notebook calcula el valor económico de la producción remanente considerando
 Con estos datos se obtuvo un valor económico de la producción remanente de:
 
 \[
-\boxed{\text{US\$ 48467573.00446002}}
+\boxed{\text{US\$ 20474109.34590784}}
 \]
 
 Este valor corresponde a la producción remanente estimada entre el 2 de julio de 2022 y la fecha de cierre del pozo.

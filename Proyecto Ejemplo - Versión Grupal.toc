@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.7.1}Cálculo del valor de la producción acumulada remanente}{8}{subsection.2.7.1}%
 \contentsline {section}{\numberline {2.8}Código del Punto 5}{9}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}Cálculo de la producción acumulada en un determinado año}{9}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Gráfico de barras}{11}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.2}Gráfico de barras}{10}{subsection.2.8.2}%
 \contentsline {chapter}{\numberline {3}Resultados}{12}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Análisis del ajuste exponencial}{12}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Ajuste exponencial de los datos}{12}{subsection.3.1.1}%

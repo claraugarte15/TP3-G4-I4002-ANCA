@@ -9,4 +9,4 @@
 \contentsline {lstlisting}{\numberline {2.9}{\ignorespaces Fecha del 50\% del volumen total}}{8}{lstlisting.2.9}%
 \contentsline {lstlisting}{\numberline {2.10}{\ignorespaces Valor de la producción acumulada remanente}}{8}{lstlisting.2.10}%
 \contentsline {lstlisting}{\numberline {2.11}{\ignorespaces Producción acumulada en una determinada temporada}}{9}{lstlisting.2.11}%
-\contentsline {lstlisting}{\numberline {2.12}{\ignorespaces Gráfico de barras}}{11}{lstlisting.2.12}%
+\contentsline {lstlisting}{\numberline {2.12}{\ignorespaces Gráfico de barras}}{10}{lstlisting.2.12}%

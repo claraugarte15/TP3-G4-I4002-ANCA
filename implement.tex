@@ -148,31 +148,36 @@ print('Año de cierre (variable yearcierre, puede usarse en gráfico del Punto 5
 
 
 \newpage
+\newpage
 
 \section{Códigos del Punto 2} 
 
 \subsection{Cálculo de la producción acumulada remanente, producción acumulada extraída, producción acumulada total y porcentaje remanente}
 
-A partir del siguiente código se muestra las operaciones necesarias para completar el punto 2.
+A partir del siguiente código se muestran las operaciones necesarias para completar el punto 2.
 
-\begin{lstlisting}[language=Python,frame=single,caption= Cálculos de producción ,label={cod:punto2}] 
+\begin{lstlisting}[language=Python,frame=single,caption=Cálculos de producción,label={cod:punto2}] 
 # Escribir en la siguiente línea el cálculo para determinar la producción acumulada remanente
 remanente = A * (np.exp(B*tcierre) - np.exp(B*1643)) / B
+
 # No editar siguiente línea
 print("Producción acumulada remanente =" , remanente , 'm3')
 
 # Escribir en la siguiente línea el cálculo para determinar la producción acumulada extraída
 extraida = A * (np.exp(B*1643) - np.exp(B*1)) / B
+
 # No editar siguiente línea
-print("Producción acumulada remanente =" , extraida , 'm3')
+print("Producción acumulada extraída =" , extraida , 'm3')
 
 # Escribir en la siguiente línea el cálculo para determinar la producción acumulada total
 total = A * (np.exp(B*tcierre) - np.exp(B*1)) / B
+
 # No editar siguiente línea
 print("Producción acumulada total =" , total , 'm3')
 
 # Escribir en la siguiente línea el cálculo para determinar el porcentaje remanente
 porc = (remanente / total) * 100
+
 # No editar siguiente línea
 print("Porcentaje de producción acumulada remanente =" , porc , '%')
 \end{lstlisting}
@@ -181,11 +186,12 @@ print("Porcentaje de producción acumulada remanente =" , porc , '%')
 
 Para obtener el gráfico circular (de torta) con la producción acumulada remanente y la producción acumulada extraída se utilizó el siguiente código.
 
-\begin{lstlisting}[language=Python,frame=single,caption= Gráfico de torta ,label={cod:graftorta}] 
-etiquetas=['Extraida','Remanente']
-volumenes=[extraida,remanente]
+\begin{lstlisting}[language=Python,frame=single,caption=Gráfico de torta,label={cod:graftorta}] 
+etiquetas = ['Extraída','Remanente']
+volumenes = [extraida,remanente]
+
 plt.pie(volumenes,autopct='%.1f%%',labels=etiquetas)
-plt.title('Producción Acumulada')
+plt.title('Producción acumulada')
 plt.show()
 \end{lstlisting}
 
@@ -232,14 +238,15 @@ print('Valor de producción acumulada remanente = US$',valorrem) # No editar est
 \end{lstlisting}
 
 \newpage
-\section{Código del Punto 5} 
+
+\section{Código del Punto 5}
 
 \subsection{Cálculo de la producción acumulada en un determinado año}
 
-A partir del siguiente código se calcula producción acumulada en un determinado año, considerando a t como las fechas de inicio y fin del año. 
+A partir del siguiente código se calcula la producción acumulada correspondiente a cada año, considerando a $t$ como los días de inicio y fin de cada período. Para el año 2030 se utiliza la fecha exacta de cierre del pozo calculada en el Punto 1.
 
-\begin{lstlisting}[language=Python,frame=single,caption=Producción acumulada en una determinada temporada ,label={cod:punto5}] 
-  # --- PUNTO 5: CÁLCULO ANUAL (GRUPO 4) ---
+\begin{lstlisting}[language=Python,frame=single,caption=Producción acumulada en una determinada temporada,label={cod:punto5}]
+# --- PUNTO 5: CÁLCULO ANUAL (GRUPO 4) ---
 
 t1ene = 1
 t31dic = 365
@@ -301,49 +308,41 @@ t31dic = 4383
 acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
 print("Producción del 2029 en US$: ", np.ceil(acumyear))
 
+# Producción de 2030 hasta la fecha exacta de cierre
 t1ene = 4384
-t31dic = 4748
+t31dic = int(tcierre)
+
 acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
 print("Producción del 2030 en US$: ", np.ceil(acumyear))
 
-t1ene = 4749
-t31dic = 5113
-acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
-print("Producción del 2031 en US$: ", np.ceil(acumyear))
-
-t1ene = 5114
-t31dic = 5479
-acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
-print("Producción del 2032 en US$: ", np.ceil(acumyear))
-
-t1ene = 5480
-t31dic = 5844
-acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
-print("Producción del 2033 en US$: ", np.ceil(acumyear))
-
-# Ajustamos el cierre exacto según tcierre del Punto 1
-t1ene = 5845
-t31dic = int(tcierre)
-acumyear = ((A / B) * (np.exp(B * t31dic) - np.exp(B * t1ene))) * 6.28981 * 62
-print("Producción del 2034 en US$: ", np.ceil(acumyear))
-
 acumyear # No editar esta línea
-
-\end{lstlisting} 
+\end{lstlisting}
 
 \subsection{Gráfico de barras}
+A partir del siguiente código se obtiene el gráfico de barras de los valores anuales de producción desde 2022 hasta el cierre del pozo en 2030.
 
-A partir del siguiente código obtenemos el gráfico de barras de las producciones acumuladas desde 2022 hasta el cierre del pozo.
-\begin{lstlisting}[language=Python,frame=single,caption=Gráfico de barras ,label={cod:grafbarras}]
-  # Lista de años y sus valores correspondientes
-  year = [2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033, 2034]
-  valores = [7915250, 6710433, 5027581, 3772591, 2827103, 2118610, 1590497, 1190226, 892015, 668470, 500643, 375429, 246399]
+\begin{lstlisting}[language=Python,frame=single,caption=Gráfico de barras,label={cod:grafbarras}]
+# Lista de años y sus valores correspondientes
+year = [2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030]
 
-  # Gráfico de barras directo
-  plt.bar(year, valores)
-  plt.title('Producción Anual (US$) - 2022 al Cierre')
-  plt.xlabel('Año')
-  plt.ylabel('Valor en US$')
-  plt.xticks(year)
-  plt.show()
+# Valores de producción anual en US$
+valores = [
+    7514434,
+    5356702,
+    3827368,
+    2719551,
+    1938646,
+    1381974,
+    987421,
+    701616,
+    63573
+]
+
+# Gráfico de barras
+plt.bar(year, valores)
+plt.title('Producción Anual (US$) - 2022 al Cierre')
+plt.xlabel('Año')
+plt.ylabel('Valor en US$')
+plt.xticks(year)
+plt.show()
 \end{lstlisting}
